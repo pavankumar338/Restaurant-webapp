@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Outfit", sans-serif;
+  
+  --color-gold-50: #fbf8eb;
+  --color-gold-100: #f6edd0;
+  --color-gold-200: #ecd79c;
+  --color-gold-300: #dfbc61;
+  --color-gold-400: #d29e31;
+  --color-gold-500: #d4af37; /* Luxury Gold Primary */
+  --color-gold-600: #a47c21;
+  --color-gold-700: #7d5c19;
+  --color-gold-800: #583f12;
+  --color-gold-900: #3b280b;
+  --color-gold-950: #231604;
+}
+
+@layer base {
+  body {
+    @apply transition-colors duration-300;
+  }
+}
+
+/* Luxury Glassmorphism Utilities */
+.glass-dark {
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.12);
+}
+
+.glass-light {
+  background: rgba(250, 248, 245, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* Subtle glow effects */
+.gold-glow {
+  box-shadow: 0 4px 30px rgba(212, 175, 55, 0.15);
+}
+
+.gold-glow-hover:hover {
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.25);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.text-gold-glow {
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+}
+
+/* Scroll progress bar animation styling */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #d4af37, #b89329, #991b1b);
+  transform-origin: 0%;
+  z-index: 100;
+}
+
+/* Parallax zoom utility */
+.parallax-zoom {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.parallax-zoom:hover {
+  transform: scale(1.06);
+}
+
+/* Hide native scrollbar while retaining functionality for lists */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom premium scrollbar for main window */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 4px;
+  border: 2px solid #0a0a0a;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
