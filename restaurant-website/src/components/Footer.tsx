@@ -21,10 +21,7 @@ export const Footer: React.FC = () => {
     { label: "Home", tab: "home" },
     { label: "Our Story", tab: "about" },
     { label: "Curated Menu", tab: "menu" },
-    { label: "Book a Table", tab: "reservation" },
     { label: "Atmosphere Gallery", tab: "gallery" },
-    { label: "Private Events", tab: "events" },
-    { label: "Epicurean Blog", tab: "blog" },
     { label: "Contact Us", tab: "contact" },
   ];
 
@@ -41,10 +38,10 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
           <div className="lg:col-span-1">
             <h3 className="font-serif text-2xl font-semibold dark:text-stone-100 text-stone-900 tracking-wide">
-              The Club L'Ambroisie
+              Club FrydaddyVNK
             </h3>
             <p className="mt-2 text-sm font-sans">
-              Subscribe to receive exclusive invitations to tasting events, chef tables, and monthly seasonal recipe insights.
+              Subscribe to receive exclusive coupons, new dish alerts, and weekend special updates.
             </p>
           </div>
           <div className="lg:col-span-2">
@@ -95,11 +92,11 @@ export const Footer: React.FC = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <span className="font-serif text-2xl tracking-widest font-semibold text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-gold-500 to-gold-600">
-                L'AMBROISIE
+                FRY DADDY
               </span>
             </div>
             <p className="text-sm leading-relaxed">
-              Crafting unforgettable culinary memories since 1994. Under the guidance of our Michelin-starred kitchen, every plate is an expressive statement of art, flavor, and tradition.
+              Serving Palnadu's best crispy fried chicken, gourmet burgers, wood-fired pizzas, and thick milkshakes. Made fresh with premium ingredients, full of flavor and passion.
             </p>
             <div className="flex space-x-4 pt-2">
               <a href="#" className="hover:text-gold-500 transition-colors" aria-label="Instagram">
@@ -140,20 +137,12 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-3 text-sm font-sans">
               <li className="flex justify-between border-b border-dashed dark:border-stone-900 border-stone-200 pb-1.5">
-                <span>Wednesday – Friday</span>
-                <span className="font-medium dark:text-stone-300 text-stone-850">17:00 – 23:00</span>
-              </li>
-              <li className="flex justify-between border-b border-dashed dark:border-stone-900 border-stone-200 pb-1.5">
-                <span>Saturday</span>
-                <span className="font-medium dark:text-stone-300 text-stone-850">12:00 – 23:30</span>
-              </li>
-              <li className="flex justify-between border-b border-dashed dark:border-stone-900 border-stone-200 pb-1.5">
-                <span>Sunday Brunch</span>
-                <span className="font-medium dark:text-stone-300 text-stone-850">11:30 – 16:00</span>
+                <span>Monday – Sunday</span>
+                <span className="font-medium dark:text-stone-300 text-stone-850">11:00 AM – 11:00 PM</span>
               </li>
               <li className="flex justify-between pb-1.5 text-stone-500">
-                <span>Monday & Tuesday</span>
-                <span className="italic">Closed</span>
+                <span>Dine-in & Takeaway</span>
+                <span className="italic">Open Daily</span>
               </li>
             </ul>
           </div>
@@ -166,18 +155,18 @@ export const Footer: React.FC = () => {
             <ul className="space-y-4 text-sm font-sans">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-gold-500 flex-shrink-0 mt-0.5" />
-                <span>9 Rue de Furstemberg, 75006 Paris, France</span>
+                <span>Faisal Complex, Kalva Katta, Karampudi Road, Vinukonda, AP 522647</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-gold-500 flex-shrink-0" />
-                <a href="tel:+33142785630" className="hover:text-gold-500 transition-colors">
-                  +33 1 42 78 56 30
+                <a href="tel:+917947425249" className="hover:text-gold-500 transition-colors">
+                  +91 79474 25249
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-gold-500 flex-shrink-0" />
-                <a href="mailto:ambroisie@contact.fr" className="hover:text-gold-500 transition-colors">
-                  reservations@lambroisie.com
+                <a href="mailto:info@frydaddyvnk.com" className="hover:text-gold-500 transition-colors">
+                  info@frydaddyvnk.com
                 </a>
               </li>
             </ul>
@@ -194,11 +183,11 @@ export const Footer: React.FC = () => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p>© {new Date().getFullYear()} L'Ambroisie. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} FrydaddyVNK. All rights reserved.</p>
           <div className="flex items-center justify-center gap-6">
             <span className="flex items-center gap-1.5">
               <ShieldCheck className="h-4 w-4 text-gold-500" />
-              <span>Michelin Star Gastronomy Guide Approved</span>
+              <span>Palnadu's Favorite Gourmet Fast Food & Cafe</span>
             </span>
             <a href="#" className="hover:text-gold-500 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-gold-500 transition-colors">Terms of Dining</a>

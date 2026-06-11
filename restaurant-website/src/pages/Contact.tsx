@@ -62,8 +62,8 @@ export const Contact: React.FC = () => {
               <div className="w-10 h-0.5 bg-gold-500" />
               
               <div className="space-y-4 font-sans text-sm leading-relaxed">
-                <a 
-                  href="https://maps.google.com/?q=9+Rue+de+Furstemberg,+75006+Paris,+France"
+                 <a 
+                  href="https://maps.google.com/?q=FrydaddyVNK,+Vinukonda,+Andhra+Pradesh"
                   target="_blank"
                   rel="noreferrer"
                   className={`flex gap-3 p-4 rounded-xl border hover:scale-[1.01] transition-transform ${
@@ -72,34 +72,34 @@ export const Contact: React.FC = () => {
                 >
                   <MapPin className="text-gold-500 h-5 w-5 flex-shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold dark:text-white text-stone-950">Grand Salon Address</h4>
-                    <p className="text-xs text-stone-500 mt-1">9 Rue de Furstemberg, 75006 Paris, France</p>
+                    <h4 className="font-semibold dark:text-white text-stone-955">Cafe Address</h4>
+                    <p className="text-xs text-stone-500 mt-1">Faisal Complex, Kalva Katta, Karampudi Road, beside Sri Satya, Vinukonda, AP 522647</p>
                   </div>
                 </a>
                 
                 <a 
-                  href="tel:+33142785630"
+                  href="tel:+917947425249"
                   className={`flex gap-3 p-4 rounded-xl border hover:scale-[1.01] transition-transform ${
                     theme === "dark" ? "bg-stone-900 border-stone-850 text-stone-300" : "bg-stone-50 border-stone-200 text-stone-750"
                   }`}
                 >
                   <Phone className="text-gold-500 h-5 w-5 flex-shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold dark:text-white text-stone-950">Concierge Desk (Call)</h4>
-                    <p className="text-xs text-stone-500 mt-1">+33 1 42 78 56 30</p>
+                    <h4 className="font-semibold dark:text-white text-stone-955">Phone Support (Call)</h4>
+                    <p className="text-xs text-stone-500 mt-1">+91 79474 25249</p>
                   </div>
                 </a>
 
                 <a 
-                  href="mailto:reservations@lambroisie.com"
+                  href="mailto:support@frydaddyvnk.com"
                   className={`flex gap-3 p-4 rounded-xl border hover:scale-[1.01] transition-transform ${
                     theme === "dark" ? "bg-stone-900 border-stone-850 text-stone-300" : "bg-stone-50 border-stone-200 text-stone-750"
                   }`}
                 >
                   <Mail className="text-gold-500 h-5 w-5 flex-shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold dark:text-white text-stone-950">Email Support</h4>
-                    <p className="text-xs text-stone-500 mt-1">reservations@lambroisie.com</p>
+                    <h4 className="font-semibold dark:text-white text-stone-955">Email Support</h4>
+                    <p className="text-xs text-stone-500 mt-1">support@frydaddyvnk.com</p>
                   </div>
                 </a>
               </div>
@@ -116,20 +116,12 @@ export const Contact: React.FC = () => {
               
               <div className="grid grid-cols-2 gap-4 text-xs font-sans">
                 <div>
-                  <span className="text-stone-500 uppercase block font-semibold">Wed – Fri</span>
-                  <span className="font-medium mt-1 block dark:text-stone-300 text-stone-850">17:00 – 23:00</span>
+                  <span className="text-stone-500 uppercase block font-semibold">Monday – Sunday</span>
+                  <span className="font-medium mt-1 block dark:text-stone-300 text-stone-850">11:00 – 23:00</span>
                 </div>
                 <div>
-                  <span className="text-stone-500 uppercase block font-semibold">Saturday</span>
-                  <span className="font-medium mt-1 block dark:text-stone-300 text-stone-850">12:00 – 23:30</span>
-                </div>
-                <div>
-                  <span className="text-stone-500 uppercase block font-semibold">Sunday Brunch</span>
-                  <span className="font-medium mt-1 block dark:text-stone-300 text-stone-850">11:30 – 16:00</span>
-                </div>
-                <div>
-                  <span className="text-stone-500 uppercase block font-semibold">Mon & Tue</span>
-                  <span className="italic mt-1 block text-stone-500">Closed</span>
+                  <span className="text-stone-500 uppercase block font-semibold">Peak Hours</span>
+                  <span className="font-medium mt-1 block dark:text-stone-300 text-stone-850">18:00 – 21:00</span>
                 </div>
               </div>
             </div>
@@ -180,7 +172,7 @@ export const Contact: React.FC = () => {
                         required
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        placeholder="Arthur Pendragon"
+                        placeholder="Pavan Kumar"
                         className={`w-full px-4 py-2.5 rounded-lg border outline-none bg-transparent text-sm font-sans ${
                           theme === "dark" ? "border-stone-800 focus:border-gold-500" : "border-stone-250 focus:border-gold-500"
                         }`}
@@ -195,7 +187,7 @@ export const Contact: React.FC = () => {
                         required
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        placeholder="arthur@camelot.co.uk"
+                        placeholder="pavan@gmail.com"
                         className={`w-full px-4 py-2.5 rounded-lg border outline-none bg-transparent text-sm font-sans ${
                           theme === "dark" ? "border-stone-800 focus:border-gold-500" : "border-stone-250 focus:border-gold-500"
                         }`}
@@ -210,7 +202,7 @@ export const Contact: React.FC = () => {
                       type="text"
                       value={subject}
                       onChange={(e) => setSubject(e.target.value)}
-                      placeholder="Catering Quote, Corporate Dining..."
+                      placeholder="Catering Quote, Table Booking..."
                       className={`w-full px-4 py-2.5 rounded-lg border outline-none bg-transparent text-sm font-sans ${
                         theme === "dark" ? "border-stone-800 focus:border-gold-500" : "border-stone-250 focus:border-gold-500"
                       }`}
@@ -249,8 +241,8 @@ export const Contact: React.FC = () => {
       {/* 3. Maps Embed */}
       <section className="w-full h-96 relative border-t dark:border-stone-900 border-stone-200">
         <iframe
-          title="L'Ambroisie Bottom Contact Map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937586!2d2.3338520770546995!3d48.85361097133177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671d8ad2df243%3A0xeabff024255743b1!2s9%20Rue%20de%20Furstemberg%2C%2075006%20Paris%2C%20France!5e0!3m2!1sen!2sus!4v1717200000000!5m2!1sen!2sus"
+          title="Frydaddy Bottom Contact Map"
+          src="https://maps.google.com/maps?q=FrydaddyVNK,%20Vinukonda,%20Andhra%20Pradesh&t=&z=15&ie=UTF8&iwloc=&output=embed"
           width="100%"
           height="100%"
           style={{ border: 0 }}

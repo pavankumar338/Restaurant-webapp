@@ -4,12 +4,8 @@ export type PageTab =
   | "home"
   | "about"
   | "menu"
-  | "reservation"
   | "gallery"
-  | "events"
-  | "blog"
-  | "contact"
-  | "admin";
+  | "contact";
 
 export interface CartItem {
   id: string;
@@ -70,52 +66,52 @@ const AppContext = createContext<AppContextProps | undefined>(undefined);
 const initialReservations: ReservationRecord[] = [
   {
     id: "RES-7021",
-    name: "Lord Evelyn Sinclair",
-    email: "evelyn@sinclair.co.uk",
-    phone: "+44 7911 123456",
+    name: "Pavan Kumar",
+    email: "pavan@gmail.com",
+    phone: "+91 98480 22338",
     date: "2026-06-12",
     time: "20:00",
     guests: 4,
-    preference: "Chef's Table",
-    specialRequests: "Aniversary celebration. Prefer a quiet booth and premium wine pairing recommendation.",
+    preference: "Window Table",
+    specialRequests: "Birthday celebration. Prefer a quiet corner and recommendation for premium mocktails.",
     status: "approved",
     createdAt: "2026-06-10T11:00:00Z",
   },
   {
     id: "RES-7022",
-    name: "Dr. Genevieve Moreau",
-    email: "g.moreau@sorbonne.fr",
-    phone: "+33 6 1234 5678",
+    name: "Dr. Anusha Reddy",
+    email: "anusha.reddy@gmail.com",
+    phone: "+91 98765 43210",
     date: "2026-06-12",
     time: "21:30",
     guests: 2,
-    preference: "Window View",
-    specialRequests: "Gluten allergy for one guest.",
+    preference: "Regular Seating",
+    specialRequests: "No onions or garlic in the preparation.",
     status: "pending",
     createdAt: "2026-06-10T12:30:00Z",
   },
   {
     id: "RES-7023",
-    name: "Marcus Aurelius",
-    email: "marcus@meditations.org",
-    phone: "+39 06 123456",
+    name: "Rajesh Sharma",
+    email: "rajesh@gmail.com",
+    phone: "+91 99887 76655",
     date: "2026-06-13",
     time: "19:00",
     guests: 6,
-    preference: "Private Salon",
-    specialRequests: "No music in the background.",
+    preference: "VIP Table",
+    specialRequests: "Need high-speed Wi-Fi access.",
     status: "pending",
     createdAt: "2026-06-10T14:15:00Z",
   },
   {
     id: "RES-7020",
-    name: "Charlotte Laurent",
-    email: "charlotte@laurent.com",
-    phone: "+1 (555) 019-2834",
+    name: "Sneha Latha",
+    email: "sneha@gmail.com",
+    phone: "+91 94401 23456",
     date: "2026-06-09",
     time: "19:30",
     guests: 2,
-    preference: "Bar Counter",
+    preference: "Regular Seating",
     status: "completed",
     createdAt: "2026-06-08T18:00:00Z",
   }
@@ -124,69 +120,69 @@ const initialReservations: ReservationRecord[] = [
 const initialOrders: OrderRecord[] = [
   {
     id: "ORD-9081",
-    customerName: "Vivienne Westwood",
-    phone: "+44 7911 888777",
-    address: "Royal Suite 304, The Savoy, London",
+    customerName: "Pavan Kumar",
+    phone: "+91 98480 22338",
+    address: "Srinagar, Vinukonda, Palnadu",
     items: [
       {
-        id: "m1",
-        name: "Imperial Osetra Caviar",
-        price: 240,
-        quantity: 1,
-        image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=300&q=80",
+        id: "m4",
+        name: "Chicken Patty Burger",
+        price: 99,
+        quantity: 2,
+        image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=300&q=80",
       },
       {
-        id: "m4",
-        name: "Dry-Aged Wagyu Ribeye",
-        price: 180,
-        quantity: 2,
-        image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=300&q=80",
+        id: "m1",
+        name: "French Fries Masala",
+        price: 69,
+        quantity: 1,
+        image: "https://images.unsplash.com/photo-1576107232684-1279f390859f?auto=format&fit=crop&w=300&q=80",
       }
     ],
-    total: 600,
+    total: 267,
     date: "2026-06-10T15:20:00Z",
     status: "preparing",
   },
   {
     id: "ORD-9080",
-    customerName: "Alistair Cook",
-    phone: "+1 (555) 902-1200",
-    address: "742 Evergreen Terrace, Springfield",
+    customerName: "Gopi Krishna",
+    phone: "+91 91234 56789",
+    address: "Beside RTC Bus Stand, Vinukonda",
     items: [
       {
         id: "m2",
-        name: "Glazed Truffle Salmon",
-        price: 75,
+        name: "Paneer Burger",
+        price: 99,
         quantity: 1,
-        image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=300&q=80",
+        image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=300&q=80",
       },
       {
-        id: "m6",
-        name: "Valrhona Soufflé",
-        price: 25,
+        id: "m5",
+        name: "Mint Mojito Mocktail",
+        price: 59,
         quantity: 2,
-        image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=300&q=80",
+        image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=300&q=80",
       }
     ],
-    total: 125,
+    total: 217,
     date: "2026-06-10T14:05:00Z",
     status: "delivered",
   },
   {
     id: "ORD-9079",
-    customerName: "Serena Williams",
-    phone: "+1 (555) 304-4903",
-    address: "Ocean Drive Penthouse B, Miami",
+    customerName: "Kavitha Rani",
+    phone: "+91 95500 12345",
+    address: "Kothapeta, Vinukonda",
     items: [
       {
         id: "m3",
-        name: "Truffle Fettuccine",
-        price: 65,
-        quantity: 4,
-        image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=300&q=80",
+        name: "Veg Pizza (8\")",
+        price: 179,
+        quantity: 1,
+        image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=300&q=80",
       }
     ],
-    total: 260,
+    total: 179,
     date: "2026-06-10T11:45:00Z",
     status: "completed",
   }
@@ -201,7 +197,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [activeTab, setActiveTabState] = useState<PageTab>(() => {
     // Read from window hash if available, else default to 'home'
     const hash = window.location.hash.replace("#", "") as PageTab;
-    const tabs: PageTab[] = ["home", "about", "menu", "reservation", "gallery", "events", "blog", "contact", "admin"];
+    const tabs: PageTab[] = ["home", "about", "menu", "gallery", "contact"];
     return tabs.includes(hash) ? hash : "home";
   });
 
@@ -225,7 +221,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace("#", "") as PageTab;
-      const tabs: PageTab[] = ["home", "about", "menu", "reservation", "gallery", "events", "blog", "contact", "admin"];
+      const tabs: PageTab[] = ["home", "about", "menu", "gallery", "contact"];
       if (tabs.includes(hash)) {
         setActiveTabState(hash);
       }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useApp } from "../context/AppContext";
 import type { PageTab } from "../context/AppContext";
-import { Menu, X, Sun, Moon, Utensils, Calendar } from "lucide-react";
+import { Menu, X, Sun, Moon, Utensils, ShoppingBag } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export const Navbar: React.FC = () => {
@@ -32,12 +32,8 @@ export const Navbar: React.FC = () => {
     { label: "Home", tab: "home" },
     { label: "About", tab: "about" },
     { label: "Menu", tab: "menu" },
-    { label: "Reservation", tab: "reservation" },
     { label: "Gallery", tab: "gallery" },
-    { label: "Events & Catering", tab: "events" },
-    { label: "Epicurean Blog", tab: "blog" },
     { label: "Contact", tab: "contact" },
-    { label: "Admin", tab: "admin" },
   ];
 
   return (
@@ -68,7 +64,7 @@ export const Navbar: React.FC = () => {
                 <Utensils className="h-6 w-6 text-gold-500" />
               </div>
               <span className="font-serif text-2xl tracking-widest font-semibold text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-gold-500 to-gold-600 dark:from-gold-200 dark:via-gold-400 dark:to-gold-500">
-                L'AMBROISIE
+                FRY DADDY
               </span>
             </div>
 
@@ -113,13 +109,13 @@ export const Navbar: React.FC = () => {
                 {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
               </button>
 
-              {/* Reservation CTA Button */}
+              {/* Order Online CTA Button */}
               <button
-                onClick={() => setActiveTab("reservation")}
+                onClick={() => setActiveTab("menu")}
                 className="flex items-center space-x-2 px-5 py-2.5 bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-500 hover:to-gold-400 text-stone-950 text-sm font-sans font-bold uppercase tracking-wider rounded border border-gold-400 shadow-md hover:shadow-lg hover:shadow-gold-500/20 transform hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
               >
-                <Calendar size={16} />
-                <span>Reserve Table</span>
+                <ShoppingBag size={16} />
+                <span>Order Online</span>
               </button>
             </div>
 
@@ -186,13 +182,13 @@ export const Navbar: React.FC = () => {
                 <div className="pt-4 px-4">
                   <button
                     onClick={() => {
-                      setActiveTab("reservation");
+                      setActiveTab("menu");
                       setIsOpen(false);
                     }}
-                    className="w-full flex items-center justify-center space-x-2 px-5 py-3 bg-gradient-to-r from-gold-600 to-gold-500 text-stone-950 font-sans font-bold uppercase tracking-wider rounded border border-gold-400 shadow-md"
+                    className="w-full flex items-center justify-center space-x-2 px-5 py-3 bg-gradient-to-r from-gold-600 to-gold-500 text-stone-950 font-sans font-bold uppercase tracking-wider rounded border border-gold-400 shadow-md cursor-pointer"
                   >
-                    <Calendar size={18} />
-                    <span>Book Your Table</span>
+                    <ShoppingBag size={18} />
+                    <span>Order Online</span>
                   </button>
                 </div>
               </div>

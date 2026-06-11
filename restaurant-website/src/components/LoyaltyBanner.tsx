@@ -48,10 +48,10 @@ export const LoyaltyBanner: React.FC = () => {
               </div>
               <div>
                 <h4 className="font-serif text-lg font-semibold dark:text-stone-100 text-stone-950">
-                  L'Ambroisie Club
+                  Club FrydaddyVNK
                 </h4>
                 <p className="text-sm mt-1 leading-relaxed">
-                  Earn points on reservations and bespoke catering. Unlock private chef invitations.
+                  Earn points on reservations and online orders. Unlock special discount combos.
                 </p>
                 <button
                   onClick={() => setModalType("loyalty")}
@@ -69,10 +69,10 @@ export const LoyaltyBanner: React.FC = () => {
               </div>
               <div>
                 <h4 className="font-serif text-lg font-semibold dark:text-stone-100 text-stone-950">
-                  Epircurean Gift Cards
+                  Frydaddy Gift Cards
                 </h4>
                 <p className="text-sm mt-1 leading-relaxed">
-                  Gift a memorable dining journey. Digital cards are delivered instantly.
+                  Gift a delicious fried chicken and burger box. Digital cards are delivered instantly.
                 </p>
                 <button
                   onClick={() => setModalType("giftcard")}
@@ -93,7 +93,7 @@ export const LoyaltyBanner: React.FC = () => {
                   Digital QR Menu
                 </h4>
                 <p className="text-sm mt-1 leading-relaxed">
-                  Instant, touch-free table menu for smartphones. Always updated with daily pairings.
+                  Instant, touch-free table menu for smartphones. Always updated with new combos.
                 </p>
                 <button
                   onClick={() => setModalType("qr")}
@@ -154,15 +154,15 @@ export const LoyaltyBanner: React.FC = () => {
                   <ul className="space-y-3 mb-6 text-sm font-sans">
                     <li className="flex items-start gap-2.5">
                       <ShieldCheck size={16} className="text-gold-500 mt-0.5 flex-shrink-0" />
-                      <span><strong>Tier 1 (Epicure):</strong> 1 point per $1 spent. Complimentary dessert on birthdays.</span>
+                      <span><strong>Tier 1 (Silver):</strong> 1 point per ₹10 spent. Complimentary French Fries on birthdays.</span>
                     </li>
                     <li className="flex items-start gap-2.5">
                       <ShieldCheck size={16} className="text-gold-500 mt-0.5 flex-shrink-0" />
-                      <span><strong>Tier 2 (Gourmand):</strong> At 1000 points, receive 10% off cellar wines and priority table booking.</span>
+                      <span><strong>Tier 2 (Gold):</strong> At 1000 points, receive 10% off all orders and priority table booking.</span>
                     </li>
                     <li className="flex items-start gap-2.5">
                       <ShieldCheck size={16} className="text-gold-500 mt-0.5 flex-shrink-0" />
-                      <span><strong>Tier 3 (Grand Cru):</strong> Exclusive invitations to tasting dinners with Head Chef Vincent.</span>
+                      <span><strong>Tier 3 (Platinum):</strong> Exclusive tasting sessions of new menu items with Chef Pavan.</span>
                     </li>
                   </ul>
                   <button
@@ -211,7 +211,7 @@ export const LoyaltyBanner: React.FC = () => {
                                   : "border-stone-250 dark:border-stone-800 dark:hover:bg-stone-850 hover:bg-stone-50 text-stone-500 dark:text-stone-400"
                               }`}
                             >
-                              ${val}
+                              ₹{val}
                             </button>
                           ))}
                         </div>
@@ -248,7 +248,7 @@ export const LoyaltyBanner: React.FC = () => {
                         className="w-full py-3 mt-4 bg-gradient-to-r from-gold-600 to-gold-500 text-stone-950 font-sans font-bold uppercase tracking-wider text-xs rounded border border-gold-400 shadow-md hover:shadow-gold-500/15 transition-all cursor-pointer flex items-center justify-center gap-2"
                       >
                         <Sparkles size={14} />
-                        <span>Confirm Purchase - ${giftAmount}</span>
+                        <span>Confirm Purchase - ₹{giftAmount}</span>
                       </button>
                     </form>
                   )}
@@ -277,7 +277,7 @@ export const LoyaltyBanner: React.FC = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 013.75 9.375v-4.5zM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5zM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0113.5 9.375v-4.5z" />
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 15h.008v.008H15V15zm0 2.25h.008v.008H15v-.008zM15 19.5h.008v.008H15v-.008zm2.25-2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008v-.008zM19.5 15h.008v.008H19.5V15zm0 2.25h.008v.008H19.5v-.008zM19.5 19.5h.008v.008H19.5v-.008zM13.5 13.5h.008v.008H13.5V13.5zm0 2.25H15M13.5 18h2.25M18 13.5h1.5" />
                       </svg>
-                      <span className="text-[10px] text-stone-500 font-mono mt-1">L'Ambroisie QR-Menu</span>
+                      <span className="text-[10px] text-stone-500 font-mono mt-1">FrydaddyVNK QR-Menu</span>
                     </div>
                   </div>
 

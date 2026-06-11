@@ -8,7 +8,7 @@ interface MenuItem {
   name: string;
   price: number;
   description: string;
-  category: "Appetizers" | "Entrées" | "Desserts" | "Cellar Selection";
+  category: "Starters & Momo's" | "Burgers & Sandwiches" | "Pizzas & Rolls" | "Combos" | "Desserts & Drinks";
   image: string;
   isPopular?: boolean;
   isVegetarian: boolean;
@@ -20,127 +20,127 @@ interface MenuItem {
 const menuItems: MenuItem[] = [
   {
     id: "m1",
-    name: "Imperial Osetra Caviar",
-    price: 240,
-    description: "Chilled gold-leaf blinis, whipped farm crème fraîche, and chives.",
-    category: "Appetizers",
-    image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80",
-    isPopular: true,
-    isVegetarian: false,
-    ingredients: ["Osetra Caviar", "Buckwheat Blinis", "Edible Gold Leaf", "Crème Fraîche", "Chives"],
-    pairing: "Champagne Dom Pérignon 2012 Vintage",
-    allergens: ["Fish/Seafood", "Gluten", "Dairy"],
-  },
-  {
-    id: "m2",
-    name: "Glazed Truffle Salmon",
-    price: 75,
-    description: "Atlantic salmon loin glaze in white truffle honey, served with braised heirloom asparagus.",
-    category: "Entrées",
-    image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=600&q=80",
-    isVegetarian: false,
-    ingredients: ["Atlantic Salmon", "White Truffle Honey", "Heirloom Asparagus", "Chive Infused Oil"],
-    pairing: "Chablis Premier Cru 2019",
-    allergens: ["Fish/Seafood"],
-  },
-  {
-    id: "m3",
-    name: "Truffle Fettuccine",
-    price: 65,
-    description: "House-made artisanal pasta, double-churned Alpine butter, and freshly shaved Périgord black truffles.",
-    category: "Entrées",
-    image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80",
+    name: "French Fries Masala",
+    price: 69,
+    description: "Crispy golden French fries tossed in a spicy masala seasoning blend. Made fresh on order.",
+    category: "Starters & Momo's",
+    image: "https://images.unsplash.com/photo-1576107232684-1279f390859f?auto=format&fit=crop&w=600&q=80",
     isPopular: true,
     isVegetarian: true,
-    ingredients: ["Artisanal Fettuccine", "Alpine Butter", "Black Périgord Truffle", "Parmigiano Reggiano 36M"],
-    pairing: "Barolo Rocche dell'Annunziata 2015",
-    allergens: ["Gluten", "Dairy", "Eggs"],
-  },
-  {
-    id: "m4",
-    name: "Dry-Aged Wagyu Ribeye",
-    price: 180,
-    description: "A5 Miyazaki Wagyu seasoned with fleur de sel, served with roasted chanterelles and marrow bone.",
-    category: "Entrées",
-    image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80",
-    isPopular: true,
-    isVegetarian: false,
-    ingredients: ["A5 Miyazaki Wagyu Ribeye", "Chanterelle Mushrooms", "Roasted Marrow Bone", "Fleur de Sel"],
-    pairing: "Château Margaux 2015 Vintage",
+    ingredients: ["Potatoes", "Masala Spices", "Vegetable Oil"],
+    pairing: "Mint Mojito Mocktail",
     allergens: [],
   },
   {
-    id: "m5",
-    name: "Pan-Seared Duck Foie Gras",
-    price: 85,
-    description: "Hudson Valley foie gras, dark cherry port reduction, served over toasted brioche.",
-    category: "Appetizers",
-    image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=600&q=80", // secondary culinary placeholder
+    id: "m2",
+    name: "Paneer Burger",
+    price: 99,
+    description: "Soft paneer patty grilled to perfection with onions, tomatoes, lettuce, and rich burger sauce.",
+    category: "Burgers & Sandwiches",
+    image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80",
+    isVegetarian: true,
+    ingredients: ["Paneer Patty", "Onions", "Tomatoes", "Burger Sauce", "Bun"],
+    pairing: "Belgium Chocolate Milkshake",
+    allergens: ["Dairy", "Gluten"],
+  },
+  {
+    id: "m3",
+    name: "Veg Pizza (8\")",
+    price: 179,
+    description: "Delicious 8-inch pizza topped with onions, tomatoes, green peppers, sweet corn, and double mozzarella cheese.",
+    category: "Pizzas & Rolls",
+    image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80",
+    isVegetarian: true,
+    ingredients: ["Pizza Dough", "Onions", "Tomatoes", "Capsicum", "Mozzarella Cheese"],
+    pairing: "Orange Mocktail",
+    allergens: ["Dairy", "Gluten"],
+  },
+  {
+    id: "m4",
+    name: "Chicken Patty Burger",
+    price: 99,
+    description: "Juicy chicken patty grilled with cheese, fresh tomatoes, lettuce, and our secret burger sauce.",
+    category: "Burgers & Sandwiches",
+    image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80",
+    isPopular: true,
     isVegetarian: false,
-    ingredients: ["Duck Foie Gras", "Bing Cherries", "Port Wine Reduction", "Toasted Brioche"],
-    pairing: "Sauternes Chateau d'Yquem 2011",
-    allergens: ["Gluten"],
+    ingredients: ["Chicken Patty", "Cheddar Cheese", "Tomatoes", "Burger Sauce", "Bun"],
+    pairing: "Oreo Shake",
+    allergens: ["Gluten", "Dairy"],
+  },
+  {
+    id: "m5",
+    name: "Mint Mojito Mocktail",
+    price: 59,
+    description: "Refreshing blend of fresh mint leaves, lemon slices, sugar, and sparkling soda served chilled over ice.",
+    category: "Desserts & Drinks",
+    image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80",
+    isVegetarian: true,
+    ingredients: ["Mint Leaves", "Lemon", "Sugar Syrup", "Soda", "Ice"],
+    pairing: "French Fries or Burgers",
+    allergens: [],
   },
   {
     id: "m6",
-    name: "Valrhona Soufflé",
-    price: 25,
-    description: "Double-chocolate soufflé, warm Grand Marnier liquid core, and Madagascar vanilla bean gelato.",
-    category: "Desserts",
-    image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=80",
+    name: "Oreo Shake with Brownie",
+    price: 100,
+    description: "Rich and thick milkshake blended with crushed Oreos and finished with a hot chocolate brownie slice.",
+    category: "Desserts & Drinks",
+    image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80",
     isPopular: true,
     isVegetarian: true,
-    ingredients: ["Valrhona Dark Chocolate", "Grand Marnier", "Madagascar Vanilla Bean", "Organic Cream"],
-    pairing: "Tawny Port 20 Years Old",
-    allergens: ["Dairy", "Eggs", "Gluten"],
+    ingredients: ["Oreo Biscuits", "Vanilla Ice Cream", "Milk", "Chocolate Brownie"],
+    pairing: "Fried Chicken Popcorn",
+    allergens: ["Dairy", "Gluten"],
   },
   {
     id: "m7",
-    name: "Heirloom Beet Salad",
-    price: 45,
-    description: "Roasted gold and ruby beets, whipped goat cheese mousse, crushed pistachios, white balsamic glaze.",
-    category: "Appetizers",
-    image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=300&q=80", // placeholder
+    name: "Veg Momo's - 6",
+    price: 99,
+    description: "Steamed dumplings stuffed with cabbage, carrots, onions, and garlic, served with spicy red chili chutney.",
+    category: "Starters & Momo's",
+    image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80",
     isVegetarian: true,
-    ingredients: ["Gold Beets", "Ruby Beets", "Goat Cheese Mousse", "Pistachios", "White Balsamic Vinegar"],
-    pairing: "Sancerre Blanc 2020",
-    allergens: ["Dairy", "Nuts"],
+    ingredients: ["Flour", "Cabbage", "Carrot", "Garlic", "Spicy Chutney"],
+    pairing: "Mint Mojito Mocktail",
+    allergens: ["Gluten"],
   },
   {
     id: "m8",
-    name: "Wild Mushroom Risotto",
-    price: 60,
-    description: "Acquerello carnaroli rice simmered in mushroom broth, porcini ragout, aged Parmigiano.",
-    category: "Entrées",
-    image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=300&q=80",
-    isVegetarian: true,
-    ingredients: ["Carnaroli Rice", "Porcini Mushrooms", "Chanterelle Mushrooms", "Parmigiano Reggiano"],
-    pairing: "Meursault Chardonnay 2018",
-    allergens: ["Dairy"],
+    name: "Chicken Nuggets - 8",
+    price: 99,
+    description: "Bite-sized pieces of tender chicken breast, breaded and deep-fried until golden and crispy.",
+    category: "Starters & Momo's",
+    image: "https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=600&q=80",
+    isVegetarian: false,
+    ingredients: ["Chicken Breast", "Breadcrumbs", "Spices", "Oil"],
+    pairing: "Blue Curacao Mocktail",
+    allergens: ["Gluten"],
   },
   {
     id: "m9",
-    name: "Château Margaux 2015",
-    price: 850,
-    description: "Bottle. Grand Cru Classé Margaux. Full-bodied, silky tannins, deep blackberry and violet nose.",
-    category: "Cellar Selection",
-    image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80",
-    isVegetarian: true,
-    ingredients: ["Fermented Wine Grapes (Cabernet Sauvignon, Merlot)"],
-    pairing: "Dry-Aged Wagyu Ribeye",
-    allergens: ["Sulfites"],
+    name: "Mega Saver Combo",
+    price: 649,
+    description: "Includes 10 chicken wings, 4 chicken legs, 4 chicken strips, and a large portion of French fries.",
+    category: "Combos",
+    image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=600&q=80",
+    isPopular: true,
+    isVegetarian: false,
+    ingredients: ["Chicken Wings", "Chicken Legs", "Chicken Strips", "French Fries"],
+    pairing: "Mocktails",
+    allergens: ["Gluten"],
   },
   {
     id: "m10",
-    name: "Dom Pérignon 2012 Vintage",
-    price: 450,
-    description: "Bottle. Legendary Prestige Cuvée. Vibrant notes of stone fruits, toasted brioche, and clean minerals.",
-    category: "Cellar Selection",
+    name: "Family Saver Combo",
+    price: 999,
+    description: "The ultimate feast: 20 chicken wings, 6 chicken legs, 4 chicken strips, and 2 portions of French fries.",
+    category: "Combos",
     image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=600&q=80",
-    isVegetarian: true,
-    ingredients: ["Pinot Noir", "Chardonnay Grapes"],
-    pairing: "Imperial Osetra Caviar",
-    allergens: ["Sulfites"],
+    isVegetarian: false,
+    ingredients: ["Chicken Wings", "Chicken Legs", "Chicken Strips", "French Fries"],
+    pairing: "Perfect for family dining",
+    allergens: ["Gluten"],
   }
 ];
 
@@ -166,7 +166,7 @@ export const Menu: React.FC = () => {
   const [address, setAddress] = useState("");
   const [checkoutSuccess, setCheckoutSuccess] = useState(false);
 
-  const categories = ["All", "Appetizers", "Entrées", "Desserts", "Cellar Selection"];
+  const categories = ["All", "Starters & Momo's", "Burgers & Sandwiches", "Pizzas & Rolls", "Combos", "Desserts & Drinks"];
 
   // Filter Logic
   const filteredItems = menuItems.filter((item) => {
@@ -208,10 +208,10 @@ export const Menu: React.FC = () => {
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <span className="text-gold-500 text-xs font-bold uppercase tracking-widest font-sans">
-            La Carte Du Jour
+            Palnadu's Favorite Gourmet Fast Food & Cafe
           </span>
           <h1 className="font-serif text-4xl sm:text-6xl dark:text-stone-100 text-stone-950 mt-2 font-normal">
-            Our Curated Menu
+            Our Delicious Menu
           </h1>
           <div className="w-16 h-0.5 bg-gold-500 mx-auto mt-4" />
 
@@ -260,7 +260,7 @@ export const Menu: React.FC = () => {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-stone-500 h-4 w-4" />
               <input
                 type="text"
-                placeholder="Search caviar, steaks..."
+                placeholder="Search burgers, pizzas, chicken..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className={`w-full pl-9 pr-4 py-2 text-xs rounded-full border outline-none bg-transparent ${
@@ -357,7 +357,7 @@ export const Menu: React.FC = () => {
                       <h3 className="font-serif text-xl font-semibold dark:text-stone-100 text-stone-950">
                         {item.name}
                       </h3>
-                      <span className="font-serif text-lg font-bold text-gold-500">${item.price}</span>
+                      <span className="font-serif text-lg font-bold text-gold-500">₹{item.price}</span>
                     </div>
                     <p className="text-xs font-sans dark:text-stone-400 text-stone-600 leading-relaxed mt-2.5">
                       {item.description}
@@ -423,7 +423,7 @@ export const Menu: React.FC = () => {
                 {activeDetailItem.name}
               </h3>
               <span className="text-xs font-sans uppercase font-bold text-gold-500">
-                {activeDetailItem.category} • ${activeDetailItem.price}
+                {activeDetailItem.category} • ₹{activeDetailItem.price}
               </span>
               
               <div className="w-full h-48 overflow-hidden rounded-xl my-4">
@@ -523,9 +523,9 @@ export const Menu: React.FC = () => {
                     </div>
                     <h4 className="font-serif text-2xl font-bold dark:text-white text-stone-955 mb-2">Order Confirmed!</h4>
                     <p className="text-sm text-stone-650 dark:text-stone-300 leading-relaxed mb-4">
-                      Our kitchen has received your ticket. Preparing your selections using artisanal reduction speeds.
+                      Our kitchen has received your order. Preparing your delicious fast-food using fresh quality ingredients.
                     </p>
-                    <p className="text-xs text-gold-500 font-mono">ESTIMATED FULFILLMENT: 45 MINUTES</p>
+                    <p className="text-xs text-gold-500 font-mono">ESTIMATED FULFILLMENT: 25 MINUTES</p>
                   </div>
                 ) : (
                   <>
@@ -552,7 +552,7 @@ export const Menu: React.FC = () => {
                               <h4 className="font-serif text-sm font-semibold dark:text-stone-100 text-stone-950">
                                 {item.name}
                               </h4>
-                              <span className="text-xs text-gold-500 font-semibold">${item.price}</span>
+                              <span className="text-xs text-gold-500 font-semibold">₹{item.price}</span>
                             </div>
                             
                             {/* Qty adjustments */}
@@ -592,7 +592,7 @@ export const Menu: React.FC = () => {
                                   required
                                   value={customerName}
                                   onChange={(e) => setCustomerName(e.target.value)}
-                                  placeholder="Jane Dubois"
+                                  placeholder="Pavan Kumar"
                                   className="w-full mt-1 px-3 py-2 text-xs rounded border outline-none bg-transparent dark:border-stone-800 border-stone-250"
                                 />
                               </div>
@@ -603,19 +603,19 @@ export const Menu: React.FC = () => {
                                   required
                                   value={phone}
                                   onChange={(e) => setPhone(e.target.value)}
-                                  placeholder="+33 6..."
+                                  placeholder="+91 98765 43210"
                                   className="w-full mt-1 px-3 py-2 text-xs rounded border outline-none bg-transparent dark:border-stone-800 border-stone-250"
                                 />
                               </div>
                             </div>
                             <div>
-                              <label className="text-[10px] font-bold uppercase tracking-wider text-stone-500">Delivery Suite / Hotel Address</label>
+                              <label className="text-[10px] font-bold uppercase tracking-wider text-stone-500">Delivery / Table Address</label>
                               <input
                                 type="text"
                                 required
                                 value={address}
                                 onChange={(e) => setAddress(e.target.value)}
-                                placeholder="Suite 404, The Ritz Paris"
+                                placeholder="Srinagar, Vinukonda"
                                 className="w-full mt-1 px-3 py-2 text-xs rounded border outline-none bg-transparent dark:border-stone-800 border-stone-250"
                               />
                             </div>
@@ -631,7 +631,7 @@ export const Menu: React.FC = () => {
                                 type="submit"
                                 className="flex-grow py-2.5 bg-gradient-to-r from-gold-600 to-gold-500 text-stone-950 text-xs font-sans font-bold uppercase tracking-wider rounded border border-gold-400 shadow shadow-gold-500/10 cursor-pointer"
                               >
-                                Place Order - ${cartTotal}
+                                Place Order - ₹{cartTotal}
                               </button>
                             </div>
                           </form>
@@ -639,15 +639,15 @@ export const Menu: React.FC = () => {
                           <div className="space-y-4">
                             <div className="flex justify-between text-sm font-sans">
                               <span>Subtotal</span>
-                              <span className="font-semibold">${cartTotal}</span>
+                              <span className="font-semibold">₹{cartTotal}</span>
                             </div>
                             <div className="flex justify-between text-sm font-sans">
-                              <span>Service Gratuity (10%)</span>
-                              <span className="font-semibold">${Math.round(cartTotal * 0.1)}</span>
+                              <span>Taxes & Charges (5%)</span>
+                              <span className="font-semibold">₹{Math.round(cartTotal * 0.05)}</span>
                             </div>
                             <div className="flex justify-between text-base font-serif border-t dark:border-stone-800 border-stone-200 pt-3 text-gold-500 font-bold">
                               <span>Total Amount</span>
-                              <span>${Math.round(cartTotal * 1.1)}</span>
+                              <span>₹{Math.round(cartTotal * 1.05)}</span>
                             </div>
 
                             <button

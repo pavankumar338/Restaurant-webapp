@@ -8,7 +8,7 @@ interface BlogPost {
   title: string;
   excerpt: string;
   content: string;
-  category: "Recipes" | "Cellar Guides" | "Culinary Secrets";
+  category: "Recipes" | "Drinks & Shakes" | "Culinary Secrets";
   date: string;
   readTime: string;
   author: string;
@@ -18,35 +18,35 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     id: "b1",
-    title: "The Physics of the Perfect Soufflé",
-    excerpt: "Head Chef Vincent explains the thermal dynamics of whipped egg whites and how clay dishes retain structural integrity.",
-    content: "A soufflé is not merely a recipe; it is an architectural contract between heat and egg whites. To construct our signature Valrhona Soufflé, we double-butter our ceramic molds, brushing upwards to establish guide rails for the ascending batter. The core must remain liquid — we introduce a frozen sphere of Grand Marnier and dark chocolate ganache at the center just before baking. The oven must maintain a constant 195°C with zero humidity. In this comprehensive essay, Vincent discusses the exact chemistry behind air trapping and why standard ovens struggle to retain the necessary pressure structures.",
+    title: "The Physics of the Perfect Crispy Chicken",
+    excerpt: "Chef Pavan explains the thermal dynamics of dredging flour, frying temperatures, and locking in juicy moisture.",
+    content: "Creating the ultimate crispy fried chicken is an architectural contract between dredge thickness and oil temperature. To achieve our signature crunch, we double-dredge our seasoned chicken in spiced flour, then flash-fry at exactly 175°C. This instantly seals the outer layer, trapping the natural juices inside and ensuring the chicken remains incredibly tender. We use high-smoke-point oil to prevent any bitter residue. In this guide, Chef Pavan breaks down the exact chemistry of breading adhesion and how home kitchens can replicate this golden crunch.",
     category: "Culinary Secrets",
     date: "June 08, 2026",
-    readTime: "6 min read",
-    author: "Chef Vincent",
-    image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=80",
+    readTime: "4 min read",
+    author: "Chef Pavan",
+    image: "https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "b2",
-    title: "Pairing Grand Cru Bordeaux Vintages",
-    excerpt: "Chef Sommelier Marc explores the deep violet notes of Château Margaux 2015 and how high iron soils balance rich fats.",
-    content: "When pairing an A5 Miyazaki Wagyu ribeye, one must select a wine that does not compete with the heavy marbling but instead cleanses the palate between bites. The 2015 Château Margaux, a legendary vintage, features structured, silky tannins and notes of blackcurrant, cedar, and violet. The high iron content of the Margaux soil lends a slight mineral acidity that binds beautifully with Miyazaki fats, cutting through the richness while highlighting the beef's natural sweetness. In this article, Marc maps out the quarterly Bordeaux estate acquisitions and gives tips for aging vintages in home vaults.",
-    category: "Cellar Guides",
+    title: "The Art of the Thick & Creamy Milkshake",
+    excerpt: "Chef Raj explores the science of blending dairy fats and why correct temperature makes the shake smooth.",
+    content: "A great milkshake is all about consistency. To construct our thick shakes, we balance premium vanilla ice cream with fresh, cold milk at a 3:1 ratio. The blending speed must be high enough to aerate the milk, creating micro-bubbles that give the shake its velvety texture, but slow enough to avoid melting the fats. Adding toppings like crushed oreos or fudge brownies at the very end ensures every sip contains delightful crunchy bits. Chef Raj shares his favorite syrups, milk fat percentages, and blending secrets.",
+    category: "Drinks & Shakes",
     date: "May 24, 2026",
-    readTime: "8 min read",
-    author: "Marc Chevalier",
-    image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80",
+    readTime: "5 min read",
+    author: "Chef Raj",
+    image: "https://images.unsplash.com/photo-1579954115545-a95591f28bfc?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "b3",
-    title: "Vincent's Truffle Reduction Secret",
-    excerpt: "Revealing the slow reduction technique behind our classic white-truffle honey sauce used on Atlantic Salmon.",
-    content: "Truffle honey reduction is a fragile element. If boiled, the delicate volatile oils that give Périgord truffles their signature earthy musk evaporate entirely. Chef Vincent details the water-bath reduction method. We start with wild thyme honey, heating it slowly in copper double-boilers to 45°C. Freshly grated winter truffle peels are added, steeping for exactly six hours. We then emulsify cold chive oil and a splash of Chardonnay vinegar to achieve a balanced viscosity. Follow these step-by-step cooking temperatures to replicate this legendary sauce in your personal dining salon.",
+    title: "Unveiling the Frydaddy Secret Sauce",
+    excerpt: "Revealing the slow emulsification technique behind our signature spicy garlic mayo dip.",
+    content: "A signature sauce holds a cafe's identity. Our secret Frydaddy sauce blends creamy mayonnaise with a slow infusion of local Palnadu red chilis and fresh garlic paste. The secret is the emulsification process. We slowly drip lemon juice and olive oil into the egg yolk base to create a perfectly thick texture. Freshly ground pepper and a dash of mustard powder are added, letting the flavors marry in cold storage for exactly 12 hours. Follow these tips to create a rich, spicy dip for your crispy chicken.",
     category: "Recipes",
     date: "May 12, 2026",
-    readTime: "5 min read",
-    author: "Chef Vincent",
+    readTime: "4 min read",
+    author: "Chef Pavan",
     image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=600&q=80",
   }
 ];

@@ -7,54 +7,54 @@ export const About: React.FC = () => {
 
   const milestones = [
     {
-      year: "1994",
+      year: "2021",
       title: "The Founding",
-      desc: "Chef Vincent opens a modest 8-table salon in Rue de Furstemberg, focusing on heritage French plating.",
+      desc: "Frydaddy opens its first small kitchen in Vinukonda, introducing locals to premium crispy fried chicken.",
       icon: <Landmark size={18} />
     },
     {
-      year: "2002",
-      title: "First Michelin Recognition",
-      desc: "Our unwavering commitment to pure, unadulterated flavors is honored with our first Michelin star.",
+      year: "2022",
+      title: "Expanding the Menu",
+      desc: "We introduced our popular steamed and fried Momos, quickly becoming a local favorite.",
       icon: <Star size={18} />
     },
     {
-      year: "2009",
-      title: "The Subterranean Vaults",
-      desc: "Construction completes on our temperature-controlled wine cellar, acquiring rare vintages from Bordeaux estates.",
+      year: "2023",
+      title: "Mocktails & Gourmet Burgers",
+      desc: "Added a vibrant range of signature Mojitos and gourmet burgers, attracting food lovers from all across Palnadu.",
       icon: <Wine size={18} />
     },
     {
-      year: "2016",
-      title: "The Third Michelin Star",
-      desc: "L'Ambroisie achieves the highest culinary rank under Chef Vincent's signature reduction-sauce innovations.",
+      year: "2024",
+      title: "New Flagship Cafe",
+      desc: "Moved to our current spacious Faisal Complex branch on Karampudi Road to serve customers with a better ambiance.",
       icon: <Award size={18} />
     },
     {
       year: "2026",
-      title: "Sustainable Gastronomy",
-      desc: "We launch our direct-farm partnership network, ensuring 100% traceabilty of all vegetables and fowl.",
+      title: "Direct Sourcing Network",
+      desc: "Partnered with local poultry and organic farm vendors to ensure 100% fresh and high-quality ingredients daily.",
       icon: <Compass size={18} />
     }
   ];
 
   const team = [
     {
-      name: "Vincent L'Ambroisie",
+      name: "Chef Pavan Kumar",
       role: "Head Chef & Founder",
-      bio: "Thirty-five years of kitchen mastery. Vincent believes in pure, woodfired reductions and simple, exquisite pairings.",
+      bio: "Founder of FrydaddyVNK. Pavan is passionate about creating the perfect crispy chicken dredge and unique spicy garlic mayo.",
       image: "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=400&q=80"
     },
     {
-      name: "Amandine Dubois",
-      role: "Head Pastry Chef",
-      bio: "Formerly under Pierre Hermé. Amandine constructs light, geometric sugar structures and delicate soufflés.",
+      name: "Chef Raj",
+      role: "Mocktail & Shake Artisan",
+      bio: "Master of beverages. Raj crafts our famous mint mojitos and thick, delicious shakes, ensuring a refreshing experience.",
       image: "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=400&q=80"
     },
     {
-      name: "Marc Chevalier",
-      role: "Chef Sommelier",
-      bio: "Curates our 400+ label wine vault. Marc travels quarterly across France to acquire boutique vintages.",
+      name: "Chef Anjali",
+      role: "Kitchen Head & Quality Specialist",
+      bio: "Oversees daily food quality, ensuring every burger, roll, and pizza meets the high standards Frydaddy is known for.",
       image: "https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=400&q=80"
     }
   ];
@@ -80,13 +80,13 @@ export const About: React.FC = () => {
             {/* Story Text */}
             <div className="space-y-6">
               <h2 className="font-serif text-3xl dark:text-stone-100 text-stone-900 font-normal">
-                Thirty Years of Gastronomic Sincerity
+                Gourmet Fast Food Crafted with Passion
               </h2>
               <p className="font-sans text-sm dark:text-stone-400 text-stone-600 leading-relaxed">
-                L'Ambroisie was founded in 1994 on a singular philosophy: culinary simplicity is the ultimate expression of sophistication. Nestled in a quiet courtyard in the historic 6th arrondissement of Paris, we have spent three decades perfecting the art of French cuisine.
+                FRY DADDY was founded in Vinukonda with a simple goal: to serve the crispiest, most delicious fried chicken and gourmet burgers in Andhra Pradesh. Located in Faisal Complex on Karampudi Road, we have become the go-to spot for food lovers seeking premium quality and incredible taste.
               </p>
               <p className="font-sans text-sm dark:text-stone-400 text-stone-600 leading-relaxed">
-                We do not strive to follow fleeting trends. Instead, we honor the elements. The heat of embers, the cold sweep of cellar vaults, the exact chemical reactions of vintage reduction pans. It is this dedication that has earned us a permanent residence among the world's most acclaimed fine dining institutions.
+                We believe in fresh preparation. Every piece of chicken is hand-breaded and fried to golden perfection only when you order. From our house-made secret sauces to fresh veggies and mocktails, we focus on serving high-quality fast-food in a vibrant, friendly cafe environment.
               </p>
 
               {/* Core Values grid */}
@@ -96,8 +96,8 @@ export const About: React.FC = () => {
                     <Shield size={18} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-sm dark:text-white text-stone-950">Absolute Origin</h4>
-                    <p className="text-xs text-stone-500 mt-1">Direct provenance tracing for every meat, fish, and herb.</p>
+                    <h4 className="font-semibold text-sm dark:text-white text-stone-955">Fresh Ingredients</h4>
+                    <p className="text-xs text-stone-500 mt-1">Fresh chicken and locally sourced veggies delivered daily.</p>
                   </div>
                 </div>
 
@@ -106,8 +106,8 @@ export const About: React.FC = () => {
                     <Sparkles size={18} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-sm dark:text-white text-stone-950">Michelin Standards</h4>
-                    <p className="text-xs text-stone-500 mt-1">Every plate inspected by the Chef before presentation.</p>
+                    <h4 className="font-semibold text-sm dark:text-white text-stone-955">Quality Standards</h4>
+                    <p className="text-xs text-stone-500 mt-1">Every item cooked to order and inspected for perfect crispiness.</p>
                   </div>
                 </div>
               </div>
@@ -118,7 +118,7 @@ export const About: React.FC = () => {
               <div className="col-span-8 overflow-hidden rounded-xl shadow-xl h-[380px]">
                 <img
                   src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80"
-                  alt="L'Ambroisie Dining Room Atmosphere"
+                  alt="Frydaddy Cafe Atmosphere"
                   className="w-full h-full object-cover parallax-zoom"
                 />
               </div>
@@ -126,14 +126,14 @@ export const About: React.FC = () => {
                 <div className="overflow-hidden rounded-xl shadow-xl flex-grow h-[180px]">
                   <img
                     src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=400&q=80"
-                    alt="Wine Selection"
+                    alt="Refreshing Mocktails"
                     className="w-full h-full object-cover parallax-zoom"
                   />
                 </div>
                 <div className="overflow-hidden rounded-xl shadow-xl flex-grow h-[180px]">
                   <img
                     src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=400&q=80"
-                    alt="Caviar appetizer"
+                    alt="Crispy Chicken Popcorn"
                     className="w-full h-full object-cover parallax-zoom"
                   />
                 </div>
@@ -155,9 +155,9 @@ export const About: React.FC = () => {
               <div className="p-3 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-500 w-fit mb-4">
                 <Compass size={24} />
               </div>
-              <h3 className="font-serif text-2xl font-semibold dark:text-stone-100 text-stone-950 mb-3">Our Mission</h3>
+              <h3 className="font-serif text-2xl font-semibold dark:text-stone-100 text-stone-955 mb-3">Our Mission</h3>
               <p className="font-sans text-sm dark:text-stone-400 text-stone-650 leading-relaxed">
-                To capture the raw soul of seasonal ingredients and elevate them through French classical technique, providing an immersive multisensory dining journey that transforms simple meals into memorable lifetme histories.
+                To bring premium, high-quality, and delicious fast-food to Vinukonda, providing an inviting space where friends and families can share great food and happy memories.
               </p>
             </div>
 
@@ -167,9 +167,9 @@ export const About: React.FC = () => {
               <div className="p-3 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-500 w-fit mb-4">
                 <Heart size={24} />
               </div>
-              <h3 className="font-serif text-2xl font-semibold dark:text-stone-100 text-stone-950 mb-3">Our Vision</h3>
+              <h3 className="font-serif text-2xl font-semibold dark:text-stone-100 text-stone-955 mb-3">Our Vision</h3>
               <p className="font-sans text-sm dark:text-stone-400 text-stone-650 leading-relaxed">
-                To stand as an eternal beacon of standard-bearing French gastronomy, blending the precision of historical culinary systems with forward-thinking local agriculture partnerships to preserve earth's finest flavors for future generations.
+                To become Palnadu's leading fast-food destination, known for unmatched chicken quality, signature sauces, and a commitment to fresh local ingredients.
               </p>
             </div>
           </div>

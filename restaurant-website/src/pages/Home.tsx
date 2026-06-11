@@ -34,55 +34,55 @@ export const Home: React.FC = () => {
   const featuredDishes = [
     {
       id: "fd1",
-      name: "Imperial Osetra Caviar",
-      description: "Served over chilled gold-leaf blinis, crème fraîche, and chives. Paired with Champagne Dom Pérignon.",
-      price: 240,
-      image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=1000&q=80",
-      category: "Appetizer"
+      name: "Fry Daddy Special Mix Pizza",
+      description: "Delicious pizza topped with custom cheese blend, sweet corn, chilis, and grilled chicken or fresh veggies.",
+      price: 129,
+      image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1000&q=80",
+      category: "Pizza"
     },
     {
       id: "fd2",
-      name: "Dry-Aged Wagyu Ribeye",
-      description: "A5 Miyazaki Wagyu seasoned with fleur de sel, served with truffle butter bone marrow and chanterelle mushrooms.",
-      price: 180,
-      image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80",
-      category: "Main Course"
+      name: "Fry Daddy Fried Chicken Popcorn",
+      description: "Crunchy bite-sized chicken popcorn, seasoned with our secret spices blend. Perfect for snacking.",
+      price: 129,
+      image: "https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=1000&q=80",
+      category: "Chicken"
     },
     {
       id: "fd3",
-      name: "Glazed Truffle Salmon",
-      description: "Atlantic salmon, white truffle honey reduction, served on a bed of braised heirloom asparagus.",
-      price: 75,
-      image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=1000&q=80",
-      category: "Seafood"
+      name: "Double Cheese Patty Burger",
+      description: "Perfectly grilled juicy patty with double melting cheddar cheese, fresh tomatoes, and custom burger sauce.",
+      price: 119,
+      image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1000&q=80",
+      category: "Burger"
     },
     {
       id: "fd4",
-      name: "Valrhona Soufflé",
-      description: "Dark chocolate soufflé, Grand Marnier core, served with edible gold foil vanilla bean gelato.",
-      price: 25,
-      image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=1000&q=80",
-      category: "Dessert"
+      name: "Oreo Shake with Brownie",
+      description: "Creamy, rich milkshake blended with crushed Oreos and finished with a hot chocolate brownie slice.",
+      price: 100,
+      image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=1000&q=80",
+      category: "Milkshake"
     }
   ];
 
   const testimonials = [
     {
-      name: "Jean-Pierre Blanc",
-      role: "Michelin Guide Reviewer",
-      text: "L'Ambroisie remains the gold standard of gastronomy. The harmony between traditional technique and sensory surprise is unmatched.",
+      name: "Pavan Kumar",
+      role: "Vinukonda Foodie",
+      text: "Frydaddy's fried chicken is the absolute best in town! Crispy, juicy, and the spice blend is perfect.",
       stars: 5,
     },
     {
-      name: "Charlotte Laurent",
-      role: "Vogue Gourmet",
-      text: "The interior is a gorgeous velvet dream. Every plate is curated like a museum masterpiece. The Sommelier pairing was spectacular.",
+      name: "Sneha Latha",
+      role: "Local Guide",
+      text: "I love their burgers and Mint Mojito. Super cozy ambiance in Faisal Complex, and the prices are very pocket-friendly!",
       stars: 5,
     },
     {
-      name: "Arthur Pendragon",
-      role: "Luxury Traveler",
-      text: "An evening here is an experience of a lifetime. The Wagyu steak literally melts, and the service is incredibly warm yet precise.",
+      name: "Rajesh Sharma",
+      role: "Regular Diner",
+      text: "Their pizzas and milkshakes are spectacular. The Oreo shake with brownie is a must-try for everyone visiting!",
       stars: 5,
     }
   ];
@@ -126,7 +126,7 @@ export const Home: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-gold-500 font-sans text-xs sm:text-sm font-bold uppercase tracking-widest block mb-4"
           >
-            Haute Gastronomie & Luxury Dining
+            Palnadu's Favorite Fast Food & Cafe
           </motion.span>
           
           <motion.h1
@@ -135,7 +135,7 @@ export const Home: React.FC = () => {
             transition={{ duration: 1, delay: 0.2 }}
             className="font-serif text-5xl sm:text-7xl md:text-8xl font-normal tracking-wide text-white leading-tight"
           >
-            L'Ambroisie
+            FRY DADDY
           </motion.h1>
           
           <motion.div
@@ -151,7 +151,7 @@ export const Home: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="font-serif italic text-lg sm:text-2xl text-stone-200 font-light max-w-2xl mx-auto leading-relaxed"
           >
-            "Artistry on a plate, excellence in every detail."
+            "Palnadu's Best Crispy Chicken & Burgers"
           </motion.p>
 
           <motion.div
@@ -161,10 +161,10 @@ export const Home: React.FC = () => {
             className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4"
           >
             <button
-              onClick={() => setActiveTab("reservation")}
+              onClick={() => setActiveTab("menu")}
               className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-500 hover:to-gold-400 text-stone-950 font-sans font-bold uppercase tracking-wider text-xs rounded border border-gold-400 shadow-xl hover:shadow-gold-500/20 transform hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
             >
-              Reserve Table
+              Order Online
             </button>
             <button
               onClick={() => setActiveTab("menu")}
@@ -196,34 +196,34 @@ export const Home: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="font-serif text-4xl sm:text-5xl font-semibold text-gold-500 flex justify-center items-center">
-                <Counter target={3} />
+                <Counter target={4} suffix=".5" />
               </div>
               <p className="text-xs sm:text-sm uppercase tracking-widest text-stone-500 font-sans font-semibold mt-2">
-                Michelin Stars
+                Diner Rating
               </p>
             </div>
             <div>
               <div className="font-serif text-4xl sm:text-5xl font-semibold text-gold-500 flex justify-center items-center">
-                <Counter target={28} suffix="+" />
+                <Counter target={10000} suffix="+" />
               </div>
               <p className="text-xs sm:text-sm uppercase tracking-widest text-stone-500 font-sans font-semibold mt-2">
-                Gastronomy Awards
+                Happy Customers
               </p>
             </div>
             <div>
               <div className="font-serif text-4xl sm:text-5xl font-semibold text-gold-500 flex justify-center items-center">
-                <Counter target={32} />
+                <Counter target={3} suffix="+" />
               </div>
               <p className="text-xs sm:text-sm uppercase tracking-widest text-stone-500 font-sans font-semibold mt-2">
-                Years of Legacy
+                Years in Vinukonda
               </p>
             </div>
             <div>
               <div className="font-serif text-4xl sm:text-5xl font-semibold text-gold-500 flex justify-center items-center">
-                <Counter target={400} suffix="+" />
+                <Counter target={50} suffix="+" />
               </div>
               <p className="text-xs sm:text-sm uppercase tracking-widest text-stone-500 font-sans font-semibold mt-2">
-                Grand Cru Cellar Labels
+                Menu Varieties
               </p>
             </div>
           </div>
@@ -279,7 +279,7 @@ export const Home: React.FC = () => {
                     className="space-y-4"
                   >
                     <span className="text-gold-500 font-serif text-2xl font-medium block">
-                      ${featuredDishes[activeDishIndex].price}
+                      ₹{featuredDishes[activeDishIndex].price}
                     </span>
                     <h3 className="font-serif text-3xl font-normal tracking-wide text-stone-950 dark:text-stone-100">
                       {featuredDishes[activeDishIndex].name}
@@ -334,11 +334,11 @@ export const Home: React.FC = () => {
               <div className="absolute inset-0 border border-gold-500/30 translate-x-4 translate-y-4 rounded-2xl z-0" />
               <img
                 src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=600&q=80"
-                alt="Head Chef Chef Vincent L'Ambroisie"
+                alt="Head Chef Chef Pavan Kumar"
                 className="relative z-10 w-full h-[450px] object-cover rounded-2xl shadow-2xl"
               />
               <div className="absolute bottom-8 right-0 z-20 bg-gradient-to-r from-gold-600 to-gold-500 p-4 shadow-xl rounded-l-xl text-stone-950 font-serif text-sm italic">
-                Vincent L'Ambroisie, Founder & Head Chef
+                Pavan Kumar, Founder & Head Chef
               </div>
             </div>
 
@@ -353,14 +353,14 @@ export const Home: React.FC = () => {
               <div className="w-12 h-0.5 bg-gold-500" />
               
               <blockquote className="font-serif italic text-lg sm:text-xl dark:text-stone-200 text-stone-850 leading-relaxed border-l-2 border-gold-500 pl-4">
-                "Ingredients dictate our menus. I do not design plates to show off complex laboratory physics; I paint plates to enhance the raw, ancient flavors that soil and sea have labored to produce."
+                "Quality and flavor are at the heart of our kitchen. We select only the freshest local chicken, veggies, and spices to construct our crispy coatings and rich sauces, ensuring a mouthwatering experience in every single bite."
               </blockquote>
               
               <p className="font-sans text-sm dark:text-stone-400 text-stone-600 leading-relaxed">
-                Chef Vincent began his journey in the vineyards of Bordeaux, apprenticing under French masters. For over three decades, his focus has remained pure: fresh, locally sourced heritage ingredients, prepared using timeless woodfire ovens and reduction-pot techniques. 
+                Chef Pavan founded FrydaddyVNK with a singular dream: to bring premium, high-quality, and delicious gourmet fast food to Vinukonda. Every patty and spice dredging is crafted with care.
               </p>
               <p className="font-sans text-sm dark:text-stone-400 text-stone-600 leading-relaxed">
-                At L'Ambroisie, his brigade operates with surgeon-like accuracy, delivering dishes that honors Parisian heritage while weaving subtle spices discovered during Vincent's voyages across the Silk Road.
+                Our kitchen operates with maximum hygiene and precision, delivering plates that honor classic fast-food comfort while weaving rich spices tailored to local tastes.
               </p>
               
               <button
@@ -399,19 +399,19 @@ export const Home: React.FC = () => {
                   Wednesdays Only
                 </span>
                 <h3 className="font-serif text-2xl font-semibold dark:text-stone-100 text-stone-950 mt-1 mb-3">
-                  Sommelier Cellar Soirée
+                  Wednesday Wings Special
                 </h3>
                 <p className="font-sans text-sm dark:text-stone-400 text-stone-650 leading-relaxed">
-                  Join our resident sommelier for an intimate evening of 5 cellar-select Grand Cru wines, each paired with micro-plates designed to highlight regional terroir notes. Limited to 12 guests per evening.
+                  Get a complimentary portion of crispy chicken strips or masala fries with any order value exceeding ₹300. Perfect midweek snack to enjoy with friends and family.
                 </p>
               </div>
               <div className="flex items-center justify-between mt-8 pt-6 border-t dark:border-stone-800 border-stone-100">
-                <span className="font-serif text-lg text-gold-500 font-bold">$165 / Guest</span>
+                <span className="font-serif text-lg text-gold-500 font-bold">₹199 / Order</span>
                 <button
-                  onClick={() => setActiveTab("reservation")}
+                  onClick={() => setActiveTab("menu")}
                   className="px-5 py-2.5 bg-stone-950 text-gold-500 hover:bg-gold-500 hover:text-stone-950 border border-gold-500/35 hover:border-gold-500 font-sans font-bold text-xs uppercase tracking-wider rounded transition-all cursor-pointer"
                 >
-                  Book Wine Table
+                  Order Now
                 </button>
               </div>
             </div>
@@ -422,22 +422,22 @@ export const Home: React.FC = () => {
             }`}>
               <div>
                 <span className="text-gold-500 text-xs font-semibold uppercase tracking-wider font-sans">
-                  Sundays 11:30 – 16:00
+                  Sundays 11:00 – 16:00
                 </span>
                 <h3 className="font-serif text-2xl font-semibold dark:text-stone-100 text-stone-950 mt-1 mb-3">
-                  Caviar & Jazz Brunch
+                  Sunday Family Feast Combo
                 </h3>
                 <p className="font-sans text-sm dark:text-stone-400 text-stone-650 leading-relaxed">
-                  Indulge in free-flowing champagne cocktails, a custom egg-and-caviar buffet station, and individual hot mains while enjoying acoustic jazz quartets on our sun-washed outdoor patio.
+                  Bring the family down for a special combo deal including 1 Veg/Chicken Pizza, 2 Burgers, a large French Fries, and 2 refreshing Mint Mojito Mocktails. Great food, great vibes.
                 </p>
               </div>
               <div className="flex items-center justify-between mt-8 pt-6 border-t dark:border-stone-800 border-stone-100">
-                <span className="font-serif text-lg text-gold-500 font-bold">$95 / Guest</span>
+                <span className="font-serif text-lg text-gold-500 font-bold">₹399 / Family</span>
                 <button
-                  onClick={() => setActiveTab("reservation")}
+                  onClick={() => setActiveTab("menu")}
                   className="px-5 py-2.5 bg-stone-950 text-gold-500 hover:bg-gold-500 hover:text-stone-950 border border-gold-500/35 hover:border-gold-500 font-sans font-bold text-xs uppercase tracking-wider rounded transition-all cursor-pointer"
                 >
-                  Reserve Patio
+                  Order Feast
                 </button>
               </div>
             </div>
@@ -498,7 +498,7 @@ export const Home: React.FC = () => {
           <div className="text-center mb-16">
             <span className="text-gold-500 text-xs font-bold uppercase tracking-widest font-sans flex items-center justify-center gap-1.5">
               <Instagram size={14} />
-              <span>@lambroisie_paris</span>
+              <span>@frydaddyvnk</span>
             </span>
             <h2 className="font-serif text-4xl sm:text-5xl tracking-wide dark:text-stone-100 text-stone-950 mt-1">
               Visions of the Table
@@ -511,7 +511,7 @@ export const Home: React.FC = () => {
               <div key={index} className="relative overflow-hidden rounded-lg aspect-square group shadow-md border border-stone-250 dark:border-stone-800">
                 <img
                   src={img}
-                  alt={`L'Ambroisie Instagram Post ${index + 1}`}
+                  alt={`FrydaddyVNK Instagram Post ${index + 1}`}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 {/* Overlay on hover */}
@@ -536,7 +536,7 @@ export const Home: React.FC = () => {
                 Location
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl dark:text-stone-100 text-stone-950 font-normal">
-                Visit L'Ambroisie
+                Visit FrydaddyVNK
               </h2>
               <div className="w-12 h-0.5 bg-gold-500" />
 
@@ -545,7 +545,7 @@ export const Home: React.FC = () => {
                   <MapPin className="text-gold-500 h-5 w-5 flex-shrink-0 mt-0.5" />
                   <div>
                     <h4 className="font-semibold dark:text-white text-stone-900">Address</h4>
-                    <p className="dark:text-stone-400 text-stone-600">9 Rue de Furstemberg, 75006 Paris, France</p>
+                    <p className="dark:text-stone-400 text-stone-600">Faisal Complex, Kalva Katta, Karampudi Road, Vinukonda, AP 522647</p>
                   </div>
                 </div>
                 
@@ -553,7 +553,7 @@ export const Home: React.FC = () => {
                   <Phone className="text-gold-500 h-5 w-5 flex-shrink-0 mt-0.5" />
                   <div>
                     <h4 className="font-semibold dark:text-white text-stone-900">Telephone</h4>
-                    <p className="dark:text-stone-400 text-stone-600">+33 1 42 78 56 30</p>
+                    <p className="dark:text-stone-400 text-stone-600">+91 79474 25249</p>
                   </div>
                 </div>
 
@@ -561,15 +561,15 @@ export const Home: React.FC = () => {
                   <Mail className="text-gold-500 h-5 w-5 flex-shrink-0 mt-0.5" />
                   <div>
                     <h4 className="font-semibold dark:text-white text-stone-900">Email Enquiries</h4>
-                    <p className="dark:text-stone-400 text-stone-600">reservations@lambroisie.com</p>
+                    <p className="dark:text-stone-400 text-stone-600">info@frydaddyvnk.com</p>
                   </div>
                 </div>
 
                 <div className="flex gap-3">
                   <Clock className="text-gold-500 h-5 w-5 flex-shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold dark:text-white text-stone-900">Concierge Desk</h4>
-                    <p className="dark:text-stone-400 text-stone-600">Daily: 10:00 – 22:30</p>
+                    <h4 className="font-semibold dark:text-white text-stone-900">Operating Hours</h4>
+                    <p className="dark:text-stone-400 text-stone-600">Daily: 11:00 AM – 11:00 PM</p>
                   </div>
                 </div>
               </div>
@@ -578,8 +578,8 @@ export const Home: React.FC = () => {
             {/* Mock Google Maps Container (Right) */}
             <div className="lg:col-span-8 relative rounded-2xl overflow-hidden min-h-[350px] shadow-2xl border dark:border-stone-900 border-stone-250">
               <iframe
-                title="L'Ambroisie Google Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937586!2d2.3338520770546995!3d48.85361097133177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671d8ad2df243%3A0xeabff024255743b1!2s9%20Rue%20de%20Furstemberg%2C%2075006%20Paris%2C%20France!5e0!3m2!1sen!2sus!4v1717200000000!5m2!1sen!2sus"
+                title="FrydaddyVNK Google Map"
+                src="https://maps.google.com/maps?q=FrydaddyVNK,%20Vinukonda,%20Andhra%20Pradesh&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

@@ -24,11 +24,11 @@ export const SpecialDiscountPopup: React.FC = () => {
   };
 
   const handleClaim = () => {
-    // Save promotion in session storage so reservation page can prepopulate it
-    sessionStorage.setItem("claimedPromoCode", "AMBROISIE-VIP");
+    // Save promotion in session storage so checkout page can check it
+    sessionStorage.setItem("claimedPromoCode", "FRYDADDY-VIP");
     sessionStorage.setItem("hasSeenPromoPopup", "true");
     setIsVisible(false);
-    setActiveTab("reservation");
+    setActiveTab("menu");
   };
 
   return (
@@ -78,21 +78,21 @@ export const SpecialDiscountPopup: React.FC = () => {
 
             {/* Content */}
             <span className="text-xs font-sans font-bold tracking-widest text-gold-500 uppercase">
-              Exclusive Soiree Invitation
+              Exclusive Online Offer
             </span>
             <h3 className="font-serif text-3xl font-medium tracking-wide mt-2 mb-4 dark:text-stone-100 text-stone-900">
-              Complimentary Cuvée
+              Complimentary Mojito & Fries
             </h3>
             
             <p className="font-sans text-sm dark:text-stone-300 text-stone-700 leading-relaxed mb-6">
-              Complete an online reservation today and our Sommelier will greet your party with a complimentary glass of vintage <strong>Dom Pérignon Champagne</strong> upon arrival.
+              Place an online order today and get a complimentary <strong>Mint Mojito Mocktail</strong> or a portion of crispy <strong>Masala Fries</strong> with your delicious meal.
             </p>
 
             {/* Promo Code Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gold-500/10 border border-gold-500/25 mb-8">
               <Gift size={16} className="text-gold-500 animate-pulse" />
               <span className="font-mono text-sm font-semibold tracking-wider text-gold-500">
-                CODE: AMBROISIE-VIP
+                CODE: FRYDADDY-VIP
               </span>
             </div>
 
@@ -102,7 +102,7 @@ export const SpecialDiscountPopup: React.FC = () => {
                 onClick={handleClaim}
                 className="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-gold-600 to-gold-500 text-stone-950 font-sans font-bold uppercase tracking-wider text-xs rounded border border-gold-400 shadow-lg hover:shadow-gold-500/20 hover:scale-102 transition-all duration-300 cursor-pointer"
               >
-                Claim Offer & Book Table
+                Claim Offer & Order Online
               </button>
               <button
                 onClick={handleClose}
@@ -117,7 +117,7 @@ export const SpecialDiscountPopup: React.FC = () => {
             </div>
             
             <p className="text-[10px] text-stone-500 mt-4 italic">
-              * Valid for reservations completed online. Maximum 6 guests per table.
+              * Valid for online orders of ₹300 or more.
             </p>
           </motion.div>
         </div>

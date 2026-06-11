@@ -19,18 +19,18 @@ export const Events: React.FC = () => {
 
   const eventServices = [
     {
-      title: "Grand Receptions & Weddings",
-      desc: "Reserve our main salon for fairytale wedding receptions. Curated customized 7-course tasting menus, wine pairing cellars, live acoustic coordination, and bespoke china layouts included.",
+      title: "Birthday Parties & Celebrations",
+      desc: "Book our spacious lounge area for unforgettable birthday celebrations. We provide customized combo packages, refreshing mocktails, custom decorations, and lively music setups.",
       image: "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=600&q=80",
     },
     {
-      title: "Corporate Banquets & Galas",
-      desc: "Impress clients or host board members in our private cellar vaults. Optimized layouts for presentations, dedicated sommelier lectures, and highly coordinated service cycles.",
+      title: "Corporate & Team Gatherings",
+      desc: "Impress your coworkers and host business meetups in our comfortable AC lounge. Get custom group deals on our delicious burgers, pizzas, and mocktail pitchers.",
       image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80",
     },
     {
-      title: "Private Chef & Tasting Tables",
-      desc: "Vincent's brigade will travel directly to your estate, establishing a fine dining experience in your personal kitchen. Complete with servers, table styling, and customized plating tickets.",
+      title: "Outdoor Catering Services",
+      desc: "Frydaddy's kitchen team will travel directly to your party venue, setting up live frying and mocktail counters. Complete with professional servers and clean presentation.",
       image: "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=600&q=80",
     }
   ];
@@ -138,9 +138,9 @@ export const Events: React.FC = () => {
                 <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/25 flex items-center justify-center text-emerald-500 mx-auto mb-4 animate-pulse">
                   <CheckCircle size={32} />
                 </div>
-                <h3 className="font-serif text-2xl font-normal dark:text-white text-stone-950">Inquiry Logged</h3>
+                <h3 className="font-serif text-2xl font-normal dark:text-white text-stone-955">Inquiry Logged</h3>
                 <p className="text-sm dark:text-stone-300 text-stone-650 max-w-md mx-auto leading-relaxed">
-                  Thank you, <strong>{name}</strong>. An event director from L'Ambroisie will call your contact number within 24 business hours to discuss menu drafts and site allocations.
+                  Thank you, <strong>{name}</strong>. An event manager from Frydaddy will call your contact number within 24 business hours to discuss menu packages and catering details.
                 </p>
               </motion.div>
             ) : (
@@ -163,7 +163,7 @@ export const Events: React.FC = () => {
                       required
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      placeholder="Lord Evelyn Sinclair"
+                      placeholder="Pavan Kumar"
                       className={`w-full px-4 py-2.5 rounded-lg border outline-none bg-transparent text-sm font-sans ${
                         theme === "dark" ? "border-stone-800 focus:border-gold-500" : "border-stone-250 focus:border-gold-500"
                       }`}
@@ -178,7 +178,7 @@ export const Events: React.FC = () => {
                       required
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="evelyn@sinclair.co.uk"
+                      placeholder="pavan@gmail.com"
                       className={`w-full px-4 py-2.5 rounded-lg border outline-none bg-transparent text-sm font-sans ${
                         theme === "dark" ? "border-stone-800 focus:border-gold-500" : "border-stone-250 focus:border-gold-500"
                       }`}
@@ -193,7 +193,7 @@ export const Events: React.FC = () => {
                       required
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      placeholder="+44 7911 123456"
+                      placeholder="+91 98765 43210"
                       className={`w-full px-4 py-2.5 rounded-lg border outline-none bg-transparent text-sm font-sans ${
                         theme === "dark" ? "border-stone-800 focus:border-gold-500" : "border-stone-250 focus:border-gold-500"
                       }`}
@@ -260,7 +260,7 @@ export const Events: React.FC = () => {
                     rows={4}
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
-                    placeholder="e.g. Specific wine vintages required, floral decoration layout request, custom allergy constraints..."
+                    placeholder="e.g. Specific menu items needed, decoration requests, or spice levels..."
                     className={`w-full px-4 py-3 rounded-lg border outline-none bg-transparent text-sm font-sans ${
                       theme === "dark" ? "border-stone-800 focus:border-gold-500" : "border-stone-250 focus:border-gold-500"
                     }`}
