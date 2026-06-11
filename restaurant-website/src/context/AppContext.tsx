@@ -195,10 +195,10 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   });
 
   const [activeTab, setActiveTabState] = useState<PageTab>(() => {
-    // Read from window hash if available, else default to 'home'
-    const hash = window.location.hash.replace("#", "") as PageTab;
+    // Read from window pathname if available, else default to 'home'
+    const path = window.location.pathname.replace(/^\/+|\/+$/g, "") as PageTab;
     const tabs: PageTab[] = ["home", "about", "menu", "gallery", "contact"];
-    return tabs.includes(hash) ? hash : "home";
+    return tabs.includes(path) ? path : "home";
   });
 
   const [favorites, setFavorites] = useState<string[]>(() => {
@@ -217,22 +217,27 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     return saved ? JSON.parse(saved) : initialOrders;
   });
 
-  // Watch hash changes
+  // Watch pathname changes (popstate)
   useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash.replace("#", "") as PageTab;
+    const handlePopState = () => {
+      const path = window.location.pathname.replace(/^\/+|\/+$/g, "") as PageTab;
       const tabs: PageTab[] = ["home", "about", "menu", "gallery", "contact"];
-      if (tabs.includes(hash)) {
-        setActiveTabState(hash);
+      if (tabs.includes(path)) {
+        setActiveTabState(path);
+      } else if (window.location.pathname === "/") {
+        setActiveTabState("home");
       }
     };
-    window.addEventListener("hashchange", handleHashChange);
-    return () => window.removeEventListener("hashchange", handleHashChange);
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
   const setActiveTab = (tab: PageTab) => {
     setActiveTabState(tab);
-    window.location.hash = tab;
+    const newPath = tab === "home" ? "/" : `/${tab}`;
+    if (window.location.pathname !== newPath) {
+      window.history.pushState(null, "", newPath);
+    }
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
