@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useApp } from "../context/AppContext";
 import type { PageTab } from "../context/AppContext";
-import { Menu, X, Sun, Moon, Utensils, ShoppingBag } from "lucide-react";
+import { Menu, X, Sun, Moon, Utensils } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export const Navbar: React.FC = () => {

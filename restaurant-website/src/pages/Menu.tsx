@@ -831,7 +831,7 @@ const menuItems: MenuItem[] = [
 ];
 
 export const Menu: React.FC = () => {
-  const { theme, favorites, toggleFavorite, cart, addToCart, updateCartQuantity, addOrder } = useApp();
+  const { theme, favorites, toggleFavorite, cart, updateCartQuantity, addOrder } = useApp();
   
   // Filter States
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
