@@ -16,7 +16,7 @@ export const Navbar: React.FC = () => {
       const offset = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const progress = docHeight > 0 ? (offset / docHeight) * 100 : 0;
-      
+
       setScrollProgress(progress);
       if (offset > 50) {
         setScrolled(true);
@@ -39,29 +39,32 @@ export const Navbar: React.FC = () => {
   return (
     <>
       {/* Scroll Progress Indicator */}
-      <div 
-        className="scroll-progress-bar" 
+      <div
+        className="scroll-progress-bar"
         style={{ transform: `scaleX(${scrollProgress / 100})` }}
       />
 
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? theme === "dark"
-              ? "py-3 bg-stone-950/90 border-b border-gold-500/10 shadow-2xl backdrop-blur-md"
-              : "py-3 bg-stone-50/90 border-b border-gold-500/20 shadow-xl backdrop-blur-md"
-            : "py-6 bg-transparent"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
+          ? theme === "dark"
+            ? "py-3 bg-stone-950/90 border-b border-gold-500/10 shadow-2xl backdrop-blur-md"
+            : "py-3 bg-stone-50/90 border-b border-gold-500/20 shadow-xl backdrop-blur-md"
+          : "py-6 bg-transparent"
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <div 
+            <div
               onClick={() => setActiveTab("home")}
               className="flex items-center space-x-2 cursor-pointer group"
             >
               <div className="relative p-1.5 rounded-lg border border-gold-500/30 group-hover:border-gold-500/80 transition-colors duration-300">
-                <Utensils className="h-6 w-6 text-gold-500" />
+                <img
+                  src="LOGO.jpg"
+                  alt="logo"
+                  className="w-8 h-8 object-cover rounded-lg"
+                />
               </div>
               <span className="font-serif text-2xl tracking-widest font-semibold text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-gold-500 to-gold-600 dark:from-gold-200 dark:via-gold-400 dark:to-gold-500">
                 FRY DADDY
@@ -74,13 +77,12 @@ export const Navbar: React.FC = () => {
                 <button
                   key={link.tab}
                   onClick={() => setActiveTab(link.tab)}
-                  className={`relative px-4 py-2 text-sm font-sans tracking-wide transition-colors duration-300 font-medium ${
-                    activeTab === link.tab
-                      ? "text-gold-500"
-                      : theme === "dark"
+                  className={`relative px-4 py-2 text-sm font-sans tracking-wide transition-colors duration-300 font-medium ${activeTab === link.tab
+                    ? "text-gold-500"
+                    : theme === "dark"
                       ? "text-stone-300 hover:text-white"
                       : "text-stone-700 hover:text-stone-950"
-                  }`}
+                    }`}
                 >
                   <span>{link.label}</span>
                   {activeTab === link.tab && (
@@ -100,22 +102,21 @@ export const Navbar: React.FC = () => {
               <button
                 onClick={toggleTheme}
                 aria-label="Toggle Theme"
-                className={`p-2 rounded-full border transition-all duration-300 hover:scale-105 ${
-                  theme === "dark"
-                    ? "border-stone-800 text-gold-400 bg-stone-900/60 hover:bg-stone-900"
-                    : "border-stone-200 text-stone-700 bg-stone-100 hover:bg-stone-200/80"
-                }`}
+                className={`p-2 rounded-full border transition-all duration-300 hover:scale-105 ${theme === "dark"
+                  ? "border-stone-800 text-gold-400 bg-stone-900/60 hover:bg-stone-900"
+                  : "border-stone-200 text-stone-700 bg-stone-100 hover:bg-stone-200/80"
+                  }`}
               >
                 {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
               </button>
 
-              {/* Order Online CTA Button */}
+              {/* Explore Menu CTA Button */}
               <button
                 onClick={() => setActiveTab("menu")}
                 className="flex items-center space-x-2 px-5 py-2.5 bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-500 hover:to-gold-400 text-stone-950 text-sm font-sans font-bold uppercase tracking-wider rounded border border-gold-400 shadow-md hover:shadow-lg hover:shadow-gold-500/20 transform hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
               >
-                <ShoppingBag size={16} />
-                <span>Order Online</span>
+                <Utensils size={16} />
+                <span>Explore Menu</span>
               </button>
             </div>
 
@@ -123,22 +124,20 @@ export const Navbar: React.FC = () => {
             <div className="flex items-center space-x-3 lg:hidden">
               <button
                 onClick={toggleTheme}
-                className={`p-2 rounded-full border ${
-                  theme === "dark"
-                    ? "border-stone-800 text-gold-400 bg-stone-900/60"
-                    : "border-stone-200 text-stone-700 bg-stone-100"
-                }`}
+                className={`p-2 rounded-full border ${theme === "dark"
+                  ? "border-stone-800 text-gold-400 bg-stone-900/60"
+                  : "border-stone-200 text-stone-700 bg-stone-100"
+                  }`}
               >
                 {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
               </button>
 
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className={`p-2 rounded-md ${
-                  theme === "dark"
-                    ? "text-stone-300 hover:text-gold-400 hover:bg-stone-900/60"
-                    : "text-stone-700 hover:text-gold-600 hover:bg-stone-100"
-                }`}
+                className={`p-2 rounded-md ${theme === "dark"
+                  ? "text-stone-300 hover:text-gold-400 hover:bg-stone-900/60"
+                  : "text-stone-700 hover:text-gold-600 hover:bg-stone-100"
+                  }`}
               >
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -153,11 +152,10 @@ export const Navbar: React.FC = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className={`lg:hidden border-t mt-3 overflow-hidden ${
-                theme === "dark"
-                  ? "bg-stone-950/95 border-stone-900"
-                  : "bg-stone-50/95 border-stone-200"
-              }`}
+              className={`lg:hidden border-t mt-3 overflow-hidden ${theme === "dark"
+                ? "bg-stone-950/95 border-stone-900"
+                : "bg-stone-50/95 border-stone-200"
+                }`}
             >
               <div className="px-4 pt-2 pb-6 space-y-1">
                 {navLinks.map((link) => (
@@ -167,18 +165,17 @@ export const Navbar: React.FC = () => {
                       setActiveTab(link.tab);
                       setIsOpen(false);
                     }}
-                    className={`block w-full text-left px-4 py-3 rounded-md text-base font-sans font-medium transition-colors ${
-                      activeTab === link.tab
-                        ? "bg-gold-500/10 text-gold-500 font-semibold border-l-2 border-gold-500"
-                        : theme === "dark"
+                    className={`block w-full text-left px-4 py-3 rounded-md text-base font-sans font-medium transition-colors ${activeTab === link.tab
+                      ? "bg-gold-500/10 text-gold-500 font-semibold border-l-2 border-gold-500"
+                      : theme === "dark"
                         ? "text-stone-300 hover:bg-stone-900/50 hover:text-white"
                         : "text-stone-700 hover:bg-stone-100 hover:text-stone-950"
-                    }`}
+                      }`}
                   >
                     {link.label}
                   </button>
                 ))}
-                
+
                 <div className="pt-4 px-4">
                   <button
                     onClick={() => {
@@ -187,8 +184,8 @@ export const Navbar: React.FC = () => {
                     }}
                     className="w-full flex items-center justify-center space-x-2 px-5 py-3 bg-gradient-to-r from-gold-600 to-gold-500 text-stone-950 font-sans font-bold uppercase tracking-wider rounded border border-gold-400 shadow-md cursor-pointer"
                   >
-                    <ShoppingBag size={18} />
-                    <span>Order Online</span>
+                    <Utensils size={18} />
+                    <span>Explore Menu</span>
                   </button>
                 </div>
               </div>

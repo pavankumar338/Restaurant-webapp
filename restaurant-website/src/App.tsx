@@ -4,7 +4,6 @@ import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { FloatingWidgets } from "./components/FloatingWidgets";
 import { SpecialDiscountPopup } from "./components/SpecialDiscountPopup";
-import { LoyaltyBanner } from "./components/LoyaltyBanner";
 
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
@@ -61,10 +60,7 @@ const AppContent: React.FC = () => {
         </AnimatePresence>
       </main>
 
-      {/* 3. Loyalty Banner */}
-      <LoyaltyBanner />
-
-      {/* 4. Global Footer */}
+      {/* 3. Global Footer */}
       <Footer />
 
       {/* 5. Floating Interactive Widgets */}

@@ -17,7 +17,7 @@ const galleryItems: GalleryItem[] = [
     category: "Food",
     title: "Fry Daddy Fried Chicken",
     description: "Perfect golden crispy fried chicken seasoned with local spices.",
-    url: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=800&q=80",
+    url: "",
   },
   {
     id: "g2",
@@ -87,7 +87,7 @@ const galleryItems: GalleryItem[] = [
 export const Gallery: React.FC = () => {
   const { theme } = useApp();
   const [selectedFilter, setSelectedFilter] = useState<string>("All");
-  
+
   // Lightbox State
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
@@ -109,11 +109,10 @@ export const Gallery: React.FC = () => {
 
   return (
     <div className="pt-24 min-h-screen transition-colors duration-500 overflow-hidden">
-      
+
       {/* 1. Header Section */}
-      <section className={`py-12 border-b transition-colors duration-500 ${
-        theme === "dark" ? "bg-stone-950/20 border-stone-900" : "bg-stone-50 border-stone-200"
-      }`}>
+      <section className={`py-12 border-b transition-colors duration-500 ${theme === "dark" ? "bg-stone-950/20 border-stone-900" : "bg-stone-50 border-stone-200"
+        }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-gold-500 text-xs font-bold uppercase tracking-widest font-sans">
             Visual Ambiance
@@ -132,13 +131,12 @@ export const Gallery: React.FC = () => {
             <button
               key={cat}
               onClick={() => setSelectedFilter(cat)}
-              className={`px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer border ${
-                selectedFilter === cat
+              className={`px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer border ${selectedFilter === cat
                   ? "bg-gold-500 border-gold-500 text-stone-950 font-bold"
                   : theme === "dark"
-                  ? "border-stone-850 text-stone-400 hover:bg-stone-900"
-                  : "border-stone-200 text-stone-600 hover:bg-stone-100"
-              }`}
+                    ? "border-stone-850 text-stone-400 hover:bg-stone-900"
+                    : "border-stone-200 text-stone-600 hover:bg-stone-100"
+                }`}
             >
               {cat}
             </button>
@@ -153,9 +151,8 @@ export const Gallery: React.FC = () => {
             <div
               key={item.id}
               onClick={() => setLightboxIndex(idx)}
-              className={`break-inside-avoid relative rounded-xl overflow-hidden shadow-lg border group cursor-pointer transition-all duration-300 ${
-                theme === "dark" ? "bg-stone-900 border-stone-850" : "bg-white border-stone-200"
-              }`}
+              className={`break-inside-avoid relative rounded-xl overflow-hidden shadow-lg border group cursor-pointer transition-all duration-300 ${theme === "dark" ? "bg-stone-900 border-stone-850" : "bg-white border-stone-200"
+                }`}
             >
               {/* Media Container */}
               <div className="relative overflow-hidden w-full">
@@ -164,7 +161,7 @@ export const Gallery: React.FC = () => {
                   alt={item.title}
                   className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                
+
                 {/* Overlay details */}
                 <div className="absolute inset-0 bg-stone-950/75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-[10px] text-gold-500 uppercase font-bold font-sans tracking-wider">
@@ -174,7 +171,7 @@ export const Gallery: React.FC = () => {
                   <p className="text-xs text-stone-300 font-sans leading-relaxed mt-1">
                     {item.description}
                   </p>
-                  
+
                   {item.category === "Video" ? (
                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-gold-500 text-stone-950 flex items-center justify-center shadow-lg">
                       <Play size={20} fill="currentColor" className="ml-1" />

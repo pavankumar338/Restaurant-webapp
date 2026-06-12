@@ -78,14 +78,14 @@ export const SpecialDiscountPopup: React.FC = () => {
 
             {/* Content */}
             <span className="text-xs font-sans font-bold tracking-widest text-gold-500 uppercase">
-              Exclusive Online Offer
+              Exclusive Diner Offer
             </span>
             <h3 className="font-serif text-3xl font-medium tracking-wide mt-2 mb-4 dark:text-stone-100 text-stone-900">
               Complimentary Mojito & Fries
             </h3>
             
             <p className="font-sans text-sm dark:text-stone-300 text-stone-700 leading-relaxed mb-6">
-              Place an online order today and get a complimentary <strong>Mint Mojito Mocktail</strong> or a portion of crispy <strong>Masala Fries</strong> with your delicious meal.
+              Mention this VIP promo code during your visit today and get a complimentary <strong>Mint Mojito Mocktail</strong> or a portion of crispy <strong>Masala Fries</strong> with your delicious meal.
             </p>
 
             {/* Promo Code Badge */}
@@ -102,7 +102,7 @@ export const SpecialDiscountPopup: React.FC = () => {
                 onClick={handleClaim}
                 className="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-gold-600 to-gold-500 text-stone-950 font-sans font-bold uppercase tracking-wider text-xs rounded border border-gold-400 shadow-lg hover:shadow-gold-500/20 hover:scale-102 transition-all duration-300 cursor-pointer"
               >
-                Claim Offer & Order Online
+                Claim Offer & Explore Menu
               </button>
               <button
                 onClick={handleClose}
@@ -117,7 +117,7 @@ export const SpecialDiscountPopup: React.FC = () => {
             </div>
             
             <p className="text-[10px] text-stone-500 mt-4 italic">
-              * Valid for online orders of ₹300 or more.
+              * Valid for dining orders of ₹300 or more.
             </p>
           </motion.div>
         </div>

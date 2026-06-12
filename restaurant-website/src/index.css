@@ -15,6 +15,14 @@
   --color-gold-800: #583f12;
   --color-gold-900: #3b280b;
   --color-gold-950: #231604;
+
+  /* Custom stone shades matching the UI specifications */
+  --color-stone-250: #dedcdb;
+  --color-stone-550: #67625e;
+  --color-stone-650: #4d4945;
+  --color-stone-750: #353230;
+  --color-stone-850: #23201f;
+  --color-stone-955: #080706;
 }
 
 @layer base {

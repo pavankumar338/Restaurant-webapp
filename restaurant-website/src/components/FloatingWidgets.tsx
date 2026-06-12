@@ -16,7 +16,7 @@ export const FloatingWidgets: React.FC = () => {
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([
     {
       sender: "bot",
-      text: "Welcome to Frydaddy! I am your virtual order & booking host. How may I assist you with your delicious chicken, burger, or milkshake orders today?",
+      text: "Welcome to Frydaddy! I am your virtual host. How may I assist you with our menu or reservations today?",
       time: "Just now",
     },
   ]);
@@ -58,7 +58,7 @@ export const FloatingWidgets: React.FC = () => {
       let replyText = "Thank you for reaching out. A booking manager will respond to you via WhatsApp shortly.";
 
       if (userMsg.toLowerCase().includes("reserve") || userMsg.toLowerCase().includes("table") || userMsg.toLowerCase().includes("book")) {
-        replyText = "We are primarily a fast-food cafe. While we welcome walk-ins, you can order all our dishes online via the 'Order Online' section!";
+        replyText = "We are primarily a fast-food cafe. While we welcome walk-ins, you can explore all our dishes via the 'Explore Menu' section!";
       } else if (userMsg.toLowerCase().includes("shake") || userMsg.toLowerCase().includes("drink") || userMsg.toLowerCase().includes("mojito") || userMsg.toLowerCase().includes("mocktail")) {
         replyText = "I highly recommend trying our refreshing Mint Mojito Mocktail or one of our thick milkshakes like Oreo Shake with Brownie!";
       } else if (userMsg.toLowerCase().includes("menu") || userMsg.toLowerCase().includes("food") || userMsg.toLowerCase().includes("dish") || userMsg.toLowerCase().includes("burger")) {
@@ -169,11 +169,11 @@ export const FloatingWidgets: React.FC = () => {
 
       {/* Floating Action Buttons */}
       <div className="flex flex-col gap-3">
-        {/* Order Online Quick Button */}
+        {/* Explore Menu Quick Button */}
         <button
           onClick={() => setActiveTab("menu")}
           className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-gold-600 to-gold-500 text-stone-950 border border-gold-400 shadow-xl hover:shadow-gold-500/25 hover:scale-110 hover:-translate-y-1 transition-all duration-300 cursor-pointer lg:flex"
-          title="Quick Order"
+          title="Explore Menu"
         >
           <Utensils size={20} />
         </button>

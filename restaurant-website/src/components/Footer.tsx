@@ -27,11 +27,10 @@ export const Footer: React.FC = () => {
 
   return (
     <footer
-      className={`border-t transition-colors duration-500 ${
-        theme === "dark"
-          ? "bg-stone-950 border-stone-900 text-stone-400"
-          : "bg-stone-50 border-stone-200 text-stone-600"
-      }`}
+      className={`border-t transition-colors duration-500 ${theme === "dark"
+        ? "bg-stone-950 border-stone-900 text-stone-400"
+        : "bg-stone-50 border-stone-200 text-stone-600"
+        }`}
     >
       {/* Top Newsletter Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-b border-dashed dark:border-stone-900 border-stone-200">
@@ -55,14 +54,13 @@ export const Footer: React.FC = () => {
                   placeholder="Enter your email for exclusive invites"
                   required
                   disabled={subscribed}
-                  className={`w-full pl-12 pr-4 py-3.5 bg-transparent border rounded font-sans text-sm outline-none transition-all duration-300 ${
-                    theme === "dark"
-                      ? "border-stone-800 text-white placeholder-stone-500 focus:border-gold-500/50 focus:bg-stone-900/30"
-                      : "border-stone-200 text-stone-950 placeholder-stone-400 focus:border-gold-500/50 focus:bg-white"
-                  }`}
+                  className={`w-full pl-12 pr-4 py-3.5 bg-transparent border rounded font-sans text-sm outline-none transition-all duration-300 ${theme === "dark"
+                    ? "border-stone-800 text-white placeholder-stone-500 focus:border-gold-500/50 focus:bg-stone-900/30"
+                    : "border-stone-200 text-stone-950 placeholder-stone-400 focus:border-gold-500/50 focus:bg-white"
+                    }`}
                 />
               </div>
-              
+
               <button
                 type="submit"
                 disabled={subscribed}
@@ -99,7 +97,7 @@ export const Footer: React.FC = () => {
               Serving Palnadu's best crispy fried chicken, gourmet burgers, wood-fired pizzas, and thick milkshakes. Made fresh with premium ingredients, full of flavor and passion.
             </p>
             <div className="flex space-x-4 pt-2">
-              <a href="#" className="hover:text-gold-500 transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/frydaddyvnk/" className="hover:text-gold-500 transition-colors" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
               <a href="#" className="hover:text-gold-500 transition-colors" aria-label="Facebook">
@@ -160,7 +158,7 @@ export const Footer: React.FC = () => {
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-gold-500 flex-shrink-0" />
                 <a href="tel:+917947425249" className="hover:text-gold-500 transition-colors">
-                  +91 79474 25249
+                  +91 8125338776
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -176,11 +174,10 @@ export const Footer: React.FC = () => {
 
       {/* Bottom Legal Section */}
       <div
-        className={`border-t py-8 text-center text-xs font-sans tracking-wider transition-colors duration-500 ${
-          theme === "dark"
-            ? "bg-black/40 border-stone-900 text-stone-500"
-            : "bg-stone-150 border-stone-200 text-stone-500"
-        }`}
+        className={`border-t py-8 text-center text-xs font-sans tracking-wider transition-colors duration-500 ${theme === "dark"
+          ? "bg-black/40 border-stone-900 text-stone-500"
+          : "bg-stone-150 border-stone-200 text-stone-500"
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p>© {new Date().getFullYear()} FrydaddyVNK. All rights reserved.</p>
