@@ -136,6 +136,7 @@ export const Home: React.FC = () => {
             className="font-serif text-5xl sm:text-7xl md:text-8xl font-normal tracking-wide text-white leading-tight"
           >
             FRY DADDY
+            <span className="sr-only"> Vinukonda - Best Crispy Chicken, Burgers & Pizzas</span>
           </motion.h1>
           
           <motion.div
