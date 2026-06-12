@@ -32,7 +32,7 @@ export const Navbar: React.FC = () => {
     { label: "Home", tab: "home" },
     { label: "About", tab: "about" },
     { label: "Menu", tab: "menu" },
-    { label: "Gallery", tab: "gallery" },
+
     { label: "Contact", tab: "contact" },
   ];
 

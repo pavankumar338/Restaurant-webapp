@@ -14,34 +14,28 @@ export const About: React.FC = () => {
 
   const milestones = [
     {
-      year: "2021",
+      year: "2025",
       title: "The Founding",
       desc: "Frydaddy opens its first small kitchen in Vinukonda, introducing locals to premium crispy fried chicken.",
       icon: <Landmark size={18} />
     },
     {
-      year: "2022",
+      year: "2025",
       title: "Expanding the Menu",
       desc: "We introduced our popular steamed and fried Momos, quickly becoming a local favorite.",
       icon: <Star size={18} />
     },
     {
-      year: "2023",
-      title: "Mocktails & Gourmet Burgers",
-      desc: "Added a vibrant range of signature Mojitos and gourmet burgers, attracting food lovers from all across Palnadu.",
+      year: "2026",
+      title: "Fried Chicken &  Burgers",
+      desc: "Added a vibrant range of signature Fried Chicken items and Burgers, attracting food lovers from all across Palnadu.",
       icon: <Wine size={18} />
     },
     {
-      year: "2024",
+      year: "2026",
       title: "New Flagship Cafe",
       desc: "Moved to our current spacious Faisal Complex branch on Karampudi Road to serve customers with a better ambiance.",
       icon: <Award size={18} />
-    },
-    {
-      year: "2026",
-      title: "Direct Sourcing Network",
-      desc: "Partnered with local poultry and organic farm vendors to ensure 100% fresh and high-quality ingredients daily.",
-      icon: <Compass size={18} />
     }
   ];
 
@@ -310,7 +304,7 @@ export const About: React.FC = () => {
                       className="flex-1 flex items-center justify-center gap-1.5 py-2 px-3 text-xs font-semibold rounded-xl border border-gold-500/20 bg-gold-500/5 hover:bg-gold-500 hover:text-white dark:hover:text-stone-950 text-gold-500 transition-all duration-300 font-sans shadow-sm hover:shadow-gold-500/10"
                     >
                       <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-current" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.458L0 24zm6.59-4.846c1.6.95 3.498 1.45 5.41 1.451 5.328 0 9.66-4.333 9.664-9.666.002-2.585-1.005-5.01-2.839-6.846-1.833-1.834-4.26-2.845-6.843-2.845-5.33 0-9.663 4.333-9.667 9.667-.001 1.93.501 3.81 1.456 5.426l-.991 3.616 3.702-.97.008-.007zm11.238-6.16c-.301-.15-1.782-.88-2.06-.98-.278-.1-.48-.15-.68.15-.2.3-.778.98-.953 1.18-.175.2-.35.225-.65.075-1.127-.566-1.884-1.004-2.636-2.292-.2-.345.2-.32.572-1.065.075-.15.038-.281-.018-.381-.056-.1-.48-1.156-.658-1.58-.174-.422-.365-.363-.5-.37l-.427-.008c-.15 0-.395.056-.6.281-.205.225-.78.762-.78 1.86 0 1.097.8 2.156.91 2.306.11.15 1.574 2.404 3.812 3.376.533.23 1.01.383 1.356.493.536.17 1.024.146 1.41.089.43-.064 1.782-.729 2.035-1.433.254-.704.254-1.306.178-1.433-.076-.127-.278-.202-.58-.352z"/>
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.458L0 24zm6.59-4.846c1.6.95 3.498 1.45 5.41 1.451 5.328 0 9.66-4.333 9.664-9.666.002-2.585-1.005-5.01-2.839-6.846-1.833-1.834-4.26-2.845-6.843-2.845-5.33 0-9.663 4.333-9.667 9.667-.001 1.93.501 3.81 1.456 5.426l-.991 3.616 3.702-.97.008-.007zm11.238-6.16c-.301-.15-1.782-.88-2.06-.98-.278-.1-.48-.15-.68.15-.2.3-.778.98-.953 1.18-.175.2-.35.225-.65.075-1.127-.566-1.884-1.004-2.636-2.292-.2-.345.2-.32.572-1.065.075-.15.038-.281-.018-.381-.056-.1-.48-1.156-.658-1.58-.174-.422-.365-.363-.5-.37l-.427-.008c-.15 0-.395.056-.6.281-.205.225-.78.762-.78 1.86 0 1.097.8 2.156.91 2.306.11.15 1.574 2.404 3.812 3.376.533.23 1.01.383 1.356.493.536.17 1.024.146 1.41.089.43-.064 1.782-.729 2.035-1.433.254-.704.254-1.306.178-1.433-.076-.127-.278-.202-.58-.352z" />
                       </svg>
                       WhatsApp
                     </a>

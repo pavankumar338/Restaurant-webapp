@@ -3,12 +3,12 @@ import { AppProvider, useApp } from "./context/AppContext";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { FloatingWidgets } from "./components/FloatingWidgets";
-import { SpecialDiscountPopup } from "./components/SpecialDiscountPopup";
+
 
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Menu } from "./pages/Menu";
-import { Gallery } from "./pages/Gallery";
+
 import { Contact } from "./pages/Contact";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -24,8 +24,6 @@ const AppContent: React.FC = () => {
         return <About key="about" />;
       case "menu":
         return <Menu key="menu" />;
-      case "gallery":
-        return <Gallery key="gallery" />;
       case "contact":
         return <Contact key="contact" />;
       default:
@@ -35,11 +33,10 @@ const AppContent: React.FC = () => {
 
   return (
     <div
-      className={`min-h-screen flex flex-col justify-between transition-colors duration-500 ${
-        theme === "dark"
-          ? "bg-stone-950 text-stone-100"
-          : "bg-stone-50 text-stone-900"
-      }`}
+      className={`min-h-screen flex flex-col justify-between transition-colors duration-500 ${theme === "dark"
+        ? "bg-stone-950 text-stone-100"
+        : "bg-stone-50 text-stone-900"
+        }`}
     >
       {/* 1. Global Navigation Bar */}
       <Navbar />
@@ -66,8 +63,7 @@ const AppContent: React.FC = () => {
       {/* 5. Floating Interactive Widgets */}
       <FloatingWidgets />
 
-      {/* 6. Delayed Welcome Promotion Popup */}
-      <SpecialDiscountPopup />
+
     </div>
   );
 };
