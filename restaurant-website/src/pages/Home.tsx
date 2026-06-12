@@ -108,13 +108,13 @@ export const Home: React.FC = () => {
     <div className="overflow-hidden">
       {/* 1. Hero Section */}
       <section className="relative h-screen flex items-center justify-center bg-black overflow-hidden">
-        {/* Parallax Image Background */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-45 scale-105"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80')`,
-            transform: "translateY(0px)",
-          }}
+        {/* Hero Image Background (Semantic <img> tag for search engine indexing) */}
+        <img 
+          src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80"
+          alt="FRY DADDY Vinukonda Restaurant Cozy Dining Area"
+          className="absolute inset-0 w-full h-full object-cover opacity-45 scale-105"
+          style={{ transform: "translateY(0px)" }}
+          loading="eager"
         />
         {/* Golden vignette gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-black/70" />
