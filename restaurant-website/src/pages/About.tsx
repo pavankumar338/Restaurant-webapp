@@ -39,16 +39,6 @@ export const About: React.FC = () => {
     }
   ];
 
-  const team = [
-    {
-      name: "Subhani , Subhani ,Subhani ",
-      role: "Founder",
-      phone: "+91 81253 38776,+91 99855 57876,+91 86882 20115",
-      place: "Vinukonda, Andhra Pradesh",
-      image: "WhatsApp Image 2026-06-13 at 8.29.04 PM.jpeg"
-    }
-
-  ];
   return (
     <div className="pt-24 overflow-hidden">
       {/* 1. Heritage Story Header */}
