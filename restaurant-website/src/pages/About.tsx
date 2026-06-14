@@ -218,27 +218,13 @@ export const About: React.FC = () => {
                 />
 
                 {/* Default gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-955/80 via-transparent to-transparent opacity-100 group-hover:opacity-0 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-955/80 via-transparent to-transparent" />
 
                 {/* Default Bottom badge */}
-                <div className="absolute bottom-6 left-6 z-10 group-hover:opacity-0 transition-opacity duration-500">
+                <div className="absolute bottom-6 left-6 z-10">
                   <span className="bg-gold-500/90 text-stone-955 font-sans text-xs font-bold tracking-widest uppercase px-3 py-1.5 rounded-full shadow-lg">
                     The Founders
                   </span>
-                </div>
-
-                {/* Hover Text Overlay */}
-                <div className="absolute inset-0 bg-stone-955/90 flex flex-col justify-center items-center p-8 text-center opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-md z-20 translate-y-2 group-hover:translate-y-0">
-                  <p className="text-gold-500 font-sans text-xs font-bold tracking-widest uppercase mb-2">
-                    Our Vision
-                  </p>
-                  <h4 className="font-serif text-3xl font-normal text-white mb-4">
-                    Subhani, Subhani & Subhani
-                  </h4>
-                  <p className="font-sans text-sm text-stone-300 leading-relaxed max-w-xs">
-                    "United by a shared passion to serve Vinukonda with the finest Chinese food, gourmet fast food, and a premium dining experience built on quality and hospitality."
-                  </p>
-                  <div className="w-12 h-0.5 bg-gold-500 mt-6" />
                 </div>
               </div>
             </div>
