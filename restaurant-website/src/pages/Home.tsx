@@ -347,16 +347,15 @@ export const Home: React.FC = () => {
                 Taste is the Gateway to Memory
               </h2>
               <div className="w-12 h-0.5 bg-gold-500" />
-
               <blockquote className="font-serif italic text-lg sm:text-xl dark:text-stone-200 text-stone-850 leading-relaxed border-l-2 border-gold-500 pl-4">
-                "Quality and flavor are at the heart of our kitchen. We select only the freshest local chicken, veggies, and spices to construct our crispy coatings and rich sauces, ensuring a mouthwatering experience in every single bite."
+                "Quality and flavor are at the heart of our kitchen. We select only the freshest local chicken, authentic Chinese food ingredients, and fresh veggies to construct our crispy coatings, noodles, and signature fast food menu, ensuring a mouthwatering experience in every single bite."
               </blockquote>
-
+ 
               <p className="font-sans text-sm dark:text-stone-400 text-stone-600 leading-relaxed">
-                Chef's in FrydaddyVNK with a singular dream: to bring premium, high-quality, and delicious gourmet fast food to Vinukonda. Every patty and spice dredging is crafted with care.
+                FRY DADDY was started with a singular dream: to bring premium, high-quality, and delicious gourmet fast food and authentic Chinese food to Vinukonda. Every recipe, from our signature crispy chicken to our steamed Momos and spiced noodles, is prepared with the utmost passion and care.
               </p>
               <p className="font-sans text-sm dark:text-stone-400 text-stone-600 leading-relaxed">
-                Our kitchen operates with maximum hygiene and precision, delivering plates that honor classic fast-food comfort while weaving rich spices tailored to local tastes.
+                We believe that taste is the gateway to memory. Our kitchen blends local spices with classic fast food comfort and traditional Chinese flavours, creating memorable meals that friends and families in Vinukonda can share and cherish for a lifetime.
               </p>
 
               <button
