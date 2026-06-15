@@ -5,7 +5,8 @@ export type PageTab =
   | "about"
   | "menu"
   | "gallery"
-  | "contact";
+  | "contact"
+  | "feedback";
 
 export interface CartItem {
   id: string;
@@ -40,6 +41,19 @@ export interface OrderRecord {
   status: "pending" | "preparing" | "delivered" | "completed";
 }
 
+export interface FeedbackRecord {
+  id: string;
+  name: string;
+  phone?: string;
+  rating: number; // overall star rating
+  foodRating: number;
+  serviceRating: number;
+  ambianceRating: number;
+  recommend: boolean;
+  comments: string;
+  createdAt: string;
+}
+
 interface AppContextProps {
   theme: "dark" | "light";
   toggleTheme: () => void;
@@ -58,6 +72,8 @@ interface AppContextProps {
   orders: OrderRecord[];
   addOrder: (customerName: string, phone: string, address: string) => void;
   updateOrderStatus: (id: string, status: OrderRecord["status"]) => void;
+  feedbacks: FeedbackRecord[];
+  addFeedback: (record: Omit<FeedbackRecord, "id" | "createdAt">) => void;
 }
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
@@ -188,6 +204,31 @@ const initialOrders: OrderRecord[] = [
   }
 ];
 
+const initialFeedbacks: FeedbackRecord[] = [
+  {
+    id: "FB-101",
+    name: "Ramesh Babu",
+    rating: 5,
+    foodRating: 5,
+    serviceRating: 5,
+    ambianceRating: 4,
+    recommend: true,
+    comments: "Absolutely loved the Crispy Chicken Burger and Fries! Fast service and amazing ambiance.",
+    createdAt: "2026-06-14T12:00:00Z"
+  },
+  {
+    id: "FB-102",
+    name: "Sunitha Sen",
+    rating: 4,
+    foodRating: 4,
+    serviceRating: 5,
+    ambianceRating: 4,
+    recommend: true,
+    comments: "Great taste. The mocktails are a must-try. Will visit again soon!",
+    createdAt: "2026-06-15T09:30:00Z"
+  }
+];
+
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [theme, setTheme] = useState<"dark" | "light">(() => {
     const saved = localStorage.getItem("theme");
@@ -197,7 +238,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [activeTab, setActiveTabState] = useState<PageTab>(() => {
     // Read from window pathname if available, else default to 'home'
     const path = window.location.pathname.replace(/^\/+|\/+$/g, "") as PageTab;
-    const tabs: PageTab[] = ["home", "about", "menu", "gallery", "contact"];
+    const tabs: PageTab[] = ["home", "about", "menu", "gallery", "contact", "feedback"];
     return tabs.includes(path) ? path : "home";
   });
 
@@ -217,11 +258,16 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     return saved ? JSON.parse(saved) : initialOrders;
   });
 
+  const [feedbacks, setFeedbacks] = useState<FeedbackRecord[]>(() => {
+    const saved = localStorage.getItem("feedbacks");
+    return saved ? JSON.parse(saved) : initialFeedbacks;
+  });
+
   // Watch pathname changes (popstate)
   useEffect(() => {
     const handlePopState = () => {
       const path = window.location.pathname.replace(/^\/+|\/+$/g, "") as PageTab;
-      const tabs: PageTab[] = ["home", "about", "menu", "gallery", "contact"];
+      const tabs: PageTab[] = ["home", "about", "menu", "gallery", "contact", "feedback"];
       if (tabs.includes(path)) {
         setActiveTabState(path);
       } else if (window.location.pathname === "/") {
@@ -239,6 +285,20 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       window.history.pushState(null, "", newPath);
     }
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  // Sync feedbacks
+  useEffect(() => {
+    localStorage.setItem("feedbacks", JSON.stringify(feedbacks));
+  }, [feedbacks]);
+
+  const addFeedback = (record: Omit<FeedbackRecord, "id" | "createdAt">) => {
+    const newFeedback: FeedbackRecord = {
+      ...record,
+      id: `FB-${Math.floor(100 + Math.random() * 900)}`,
+      createdAt: new Date().toISOString(),
+    };
+    setFeedbacks((prev) => [newFeedback, ...prev]);
   };
 
   // Sync theme
@@ -365,6 +425,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         orders,
         addOrder,
         updateOrderStatus,
+        feedbacks,
+        addFeedback,
       }}
     >
       {children}

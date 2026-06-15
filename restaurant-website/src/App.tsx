@@ -8,8 +8,8 @@ import { FloatingWidgets } from "./components/FloatingWidgets";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Menu } from "./pages/Menu";
-
 import { Contact } from "./pages/Contact";
+import { Feedback } from "./pages/Feedback";
 
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -26,6 +26,8 @@ const AppContent: React.FC = () => {
         return <Menu key="menu" />;
       case "contact":
         return <Contact key="contact" />;
+      case "feedback":
+        return <Feedback key="feedback" />;
       default:
         return <Home key="home" />;
     }
